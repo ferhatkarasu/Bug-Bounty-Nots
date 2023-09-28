@@ -7,6 +7,7 @@
 
 #Knockpy (https://github.com/guelfoweb/knock)
   🗲python3 knockpy.py target.com
+  🗲python3 knockpy.py target.com | tee subs.txt
 
 #Crtsh (https://github.com/YashGoti/crtsh)
   🗲python3 crtsh.py -d target.com
