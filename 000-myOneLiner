@@ -1,0 +1,65 @@
+🗲🗲🗲INFORMATION GATHERING (Subdomain, Directory, IP, Port)🗲🗲🗲
+
+#Subfinder (https://github.com/projectdiscovery/subfinder)
+  🗲subfinder -d target.com
+  🗲subfinder -d target.com -o subs.txt
+  🗲subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
+
+#Knockpy (https://github.com/guelfoweb/knock)
+  🗲python3 knockpy.py target.com
+
+#Crtsh (https://github.com/YashGoti/crtsh)
+  🗲python3 crtsh.py -d target.com
+
+#Amass (https://github.com/owasp-amass/amass)
+  🗲amass enum -passive -d target.com
+  🗲amass enum -brute -d target.com
+  🗲amass enum -o amass.txt -d target.com
+  🗲amass enum -brute -active -d target.com -o amass.txt
+
+🗲  🗲  🗲  🗲  🗲  🗲
+#Httpx (https://github.com/projectdiscovery/httpx)
+  🗲cat subdomains.txt | httpx -title -content-length -status-code -silent
+  🗲httpx -l subdomains.txt -ports 80,8080,8000,8888 -threads 200 > subdomains_alive.txt
+
+#Httprobe (https://github.com/tomnomnom/httprobe)
+  🗲cat subdomains.txt | httprobe | tee -a subdomains_alive.txt
+  🗲cat subdomains.txt | httprobe -p http:81 -p http:3000 -p https:3000 -p http:3001 -p https:3001 -p http:8000 -p http:8080 -p https:8443 -c 50 | tee subdomains_alive.txt
+
+🗲  🗲  🗲  🗲  🗲  🗲
+#Dirsearch (https://github.com/maurosoria/dirsearch)
+  🗲dirsearch -u target.com
+  🗲dirsearch -L allsubdomains.txt
+  🗲dirsearch -L allsubdomains.txt -e json,html -r -x 500,400 -t 100
+  🗲dirsearch -L allsubdomains.txt -e json,html -r -x 500,400 -t 100 -w /home/wordlists/common.txt
+
+#Fuff (https://github.com/ffuf/ffuf)
+  🗲ffuf -w /home/wordlists/common.txt -u https://target.com/FUZZ -e .php,.php.bak,.js,.json,.txt,.sql,.tar.gz,.bkp,.html,.htm,.zip -mc 200,301 -ac
+  🗲ffuf -u https://targett.com/FUZZ -w /usr/share/wordlists/dirb/common.txt/
+  🗲ffuf -u https://target.com/admin/FUZZ -w /home/wordlists/common.txt -mc 200
+  🗲ffuf -w /home/wordlists/common.txt -u https://target.com/FUZZ -fs 1111 => does not show sizes 1111
+
+#Paramspider (https://github.com/devanshbatham/ParamSpider)
+  Discover directories for a single domain:
+  🗲paramspider -d example.com
+  Discover URLs for multiple domains from a file:
+  🗲paramspider -l domains.txt
+
+  🗲paramspider -d target.com --exclude png,jpg,gif,jpeg,swf,woff,gif,svg --level high --quiet -o result.txt
+
+#Feroxbuster (https://github.com/epi052/feroxbuster)
+  🗲./feroxbuster --url http://target.com --wordlist /home/wordlist/big.txt
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
