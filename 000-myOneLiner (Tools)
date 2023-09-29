@@ -18,6 +18,11 @@
   🗲amass enum -o amass.txt -d target.com
   🗲amass enum -brute -active -d target.com -o amass.txt
 
+
+#CurL
+Subdomain enemuration
+🗲curl --silent https://crt.sh/\?q\=%.target.com | sed 's/<\/\?[^>]\+>//g' | grep -i target.com | tail -n +9 | cut -d ">" -f2 | cut -d "<" -f1
+
 🗲  🗲  🗲  🗲  🗲  🗲
 #Httpx (https://github.com/projectdiscovery/httpx)
   🗲cat subdomains.txt | httpx -title -content-length -status-code -silent
