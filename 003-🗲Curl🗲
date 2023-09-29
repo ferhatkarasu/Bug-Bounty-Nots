@@ -1,0 +1,2 @@
+Subdomain enemuration
+🗲curl --silent https://crt.sh/\?q\=%.domain.com | sed 's/<\/\?[^>]\+>//g' | grep -i domain.com | tail -n +9 | cut -d ">" -f2 | cut -d "<" -f1
