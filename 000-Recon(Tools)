@@ -29,6 +29,11 @@
   🗲
   🗲https://web.archive.org/cdx/search/cdx?url=*.target.com&fl=original&collapse=urlkey
 
+#Gau (https://github.com/lc/gau)
+  🗲gau --subs --threads 3 --mc 200 --o urls.txt target.com
+  🗲echo “example.com” | gau | grep .js | httpx -mc 200
+  🗲cat domains.txt | gau --threads 5
+
 🗲  🗲  🗲  🗲  🗲  🗲
 #Httpx (https://github.com/projectdiscovery/httpx)
   🗲cat subdomains.txt | httpx -title -content-length -status-code -silent
