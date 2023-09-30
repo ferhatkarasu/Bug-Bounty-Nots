@@ -23,17 +23,6 @@
   Subdomain enemuration
   🗲curl --silent https://crt.sh/\?q\=%.target.com | sed 's/<\/\?[^>]\+>//g' | grep -i target.com | tail -n +9 | cut -d ">" -f2 | cut -d "<" -f1
 
-#Waybackurls (https://github.com/tomnomnom/waybackurls)
-  🗲waybackurls example.com > urls.txt | grep -oP ‘(?<=\?|&)\w+(?==|&)’ urls.txt | sort -u
-  🗲echo 'target.com' | waybackurls -dates
-  🗲
-  🗲https://web.archive.org/cdx/search/cdx?url=*.target.com&fl=original&collapse=urlkey
-
-#Gau (https://github.com/lc/gau)
-  🗲gau --subs --threads 3 --mc 200 --o urls.txt target.com
-  🗲echo “example.com” | gau | grep .js | httpx -mc 200
-  🗲cat domains.txt | gau --threads 5
-
 🗲  🗲  🗲  🗲  🗲  🗲
 #Httpx (https://github.com/projectdiscovery/httpx)
   🗲cat subdomains.txt | httpx -title -content-length -status-code -silent
@@ -67,7 +56,21 @@
 #Feroxbuster (https://github.com/epi052/feroxbuster)
   🗲./feroxbuster --url http://target.com --wordlist /home/wordlist/big.txt
 
+#Katana (https://github.com/projectdiscovery/katana)
+  🗲katana -u https://target.com
+  🗲katana -list domain_list.txt
+  🗲cat domains | httpx | katana
 
+#Waybackurls (https://github.com/tomnomnom/waybackurls)
+  🗲waybackurls example.com > urls.txt | grep -oP ‘(?<=\?|&)\w+(?==|&)’ urls.txt | sort -u
+  🗲echo 'target.com' | waybackurls -dates
+  🗲
+  🗲https://web.archive.org/cdx/search/cdx?url=*.target.com&fl=original&collapse=urlkey
+
+#Gau (https://github.com/lc/gau)
+  🗲gau --subs --threads 3 --mc 200 --o urls.txt target.com
+  🗲echo “example.com” | gau | grep .js | httpx -mc 200
+  🗲cat domains.txt | gau --threads 5
   
 
 
