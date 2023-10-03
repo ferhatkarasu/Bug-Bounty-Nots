@@ -3,370 +3,253 @@
 🗲 https://github.com/spekulatius/infosec-dorks
 
 
-🗲  🗲   🗲Root Domain🗲  🗲  🗲
 
-site:"target.com" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
-site:target.com ext:jsp | ext:asp | ext:aspx | ext:pl | ext:cfm | ext:py | ext:rb
-site:target.com ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml) (intext:confidential salary | site:target.com intext:"budget approved") inurl:confidential
-site:target.com ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml) (intext:confidential salary | site:target.com intext:”budget approved”) inurl:confidential
-site:target.com ext:inc "pwd=" "UID="
-site:target.com ext:ini intext:env.ini
-site:target.com ext:ini Version=... password
-site:target.com ext:ini Version=4.0.0.4 password
-site:target.com ext:ini eudora.ini
-site:target.com ext:ini intext:env.ini
-site:target.com ext:log "Software: Microsoft Internet Information Services *.*"
-site:target.com ext:log "Software: Microsoft Internet Information
-site:target.com ext:log "Software: Microsoft Internet Information Services *.*"
-site:target.com ext:log \"Software: Microsoft Internet Information Services *.*\"
-site:target.com ext:mdb   inurl:*.mdb inurl:fpdb shop.mdb
-site:target.com ext:mdb inurl:*.mdb inurl:fpdb shop.mdb
-site:target.com ext:mdb inurl:*.mdb inurl:fpdb shop.mdb
-site:target.com ext:php 
-site:"target.com" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
-site:target.com ext:jsp | ext:asp | ext:aspx | ext:pl | ext:cfm | ext:py | ext:rb
-site:target.com filetype:SWF SWF
-site:target.com filetype:TXT TXT
-site:target.com filetype:XLS XLS
-site:target.com filetype:asp   DBQ=" * Server.MapPath("*.mdb")
-site:target.com filetype:asp "Custom Error Message" Category Source
-site:target.com filetype:asp + "[ODBC SQL"
-site:target.com filetype:asp DBQ=" * Server.MapPath("*.mdb")
-site:target.com filetype:asp DBQ=\" * Server.MapPath(\"*.mdb\") 
-site:target.com filetype:asp “Custom Error Message” Category Source
-site:target.com filetype:bak createobject sa
-site:target.com filetype:bak inurl:"htaccess|passwd|shadow|htusers"
-site:target.com filetype:bak inurl:\"htaccess|passwd|shadow|htusers\" 
-site:target.com filetype:conf inurl:firewall -intitle:cvs 
-site:target.com filetype:conf inurl:proftpd. PROFTP FTP server configuration file reveals
-site:target.com filetype:dat "password.dat
-site:target.com filetype:dat \"password.dat\" 
-site:target.com filetype:eml eml +intext:"Subject" +intext:"From" +intext:"To"
-site:target.com filetype:eml eml +intext:\"Subject\" +intext:\"From\" +intext:\"To\" 
-site:target.com filetype:eml eml +intext:”Subject” +intext:”From” +intext:”To”
-site:target.com filetype:inc dbconn 
-site:target.com filetype:inc intext:mysql_connect
-site:target.com filetype:inc mysql_connect OR mysql_pconnect 
-site:target.com filetype:log inurl:"password.log"
-site:target.com filetype:log username putty PUTTY SSH client logs can reveal usernames
-site:target.com filetype:log “PHP Parse error” | “PHP Warning” | “PHP Error”
-site:target.com filetype:mdb inurl:users.mdb
-site:target.com filetype:ora ora
-site:target.com filetype:php
-site:target.com filetype:aspx
-site:target.com filetype:swf (Shockwave Flash)
-site:target.com filetype:ora tnsnames
-site:target.com filetype:pass pass intext:userid
-site:target.com filetype:pdf "Assessment Report" nessus
-site:target.com filetype:pem intext:private
-site:target.com filetype:properties inurl:db intext:password
-site:target.com filetype:pst inurl:"outlook.pst"
-site:target.com filetype:pst pst -from -to -date
-site:target.com filetype:reg reg +intext:"defaultusername" +intext:"defaultpassword"
-site:target.com filetype:reg reg +intext:\"defaultusername\" +intext:\"defaultpassword\" 
-site:target.com filetype:reg reg +intext:â? WINVNC3â?
-site:target.com filetype:reg reg +intext:”defaultusername” +intext:”defaultpassword”
-site:target.com filetype:reg reg HKEY_ Windows Registry exports can reveal
-site:target.com filetype:reg reg HKEY_CURRENT_USER SSHHOSTKEYS
-site:target.com filetype:sql "insert into" (pass|passwd|password)
-site:target.com filetype:sql ("values * MD5" | "values * password" | "values * encrypt")
+
+
+
+ext:log | ext:txt | ext:conf
+ext:cnf | ext:ini | ext:env
+ext:sh | ext:bak | ext:backup
+ext:swp | ext:old | ext:~
+ext:git | ext:svn
+ext:htpasswd | ext:htaccess
+ext:jsp | ext:asp | ext:aspx
+ext:pl | ext:cfm | ext:py | ext:rb
+ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml)
+ext:inc "pwd=" "UID="
+ext:ini intext:env.ini
+ext:ini Version=... password
+ext:ini Version=4.0.0.4 password
+ext:ini eudora.ini
+ext:ini intext:env.ini
+ext:log "Software: Microsoft Internet Information Services *.*"
+ext:log "Software: Microsoft Internet Information
+ext:log "Software: Microsoft Internet Information Services *.*"
+ext:log \"Software: Microsoft Internet Information Services *.*\"
+ext:mdb   inurl:*.mdb inurl:fpdb shop.mdb
+ext:mdb inurl:*.mdb inurl:fpdb shop.mdb
+ext:mdb inurl:*.mdb inurl:fpdb shop.mdb
+ext:php 
+ext:logext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
+ext:jsp | ext:asp | ext:aspx | ext:pl | ext:cfm | ext:py | ext:rb
+filetype:SWF SWF
+filetype:TXT TXT
+filetype:XLS XLS
+filetype:asp   DBQ=" * Server.MapPath("*.mdb")
+filetype:asp "Custom Error Message" Category Source
+filetype:asp + "[ODBC SQL"
+filetype:asp DBQ=" * Server.MapPath("*.mdb")
+filetype:asp DBQ=\" * Server.MapPath(\"*.mdb\") 
+filetype:asp “Custom Error Message” Category Source
+filetype:bak createobject sa
+filetype:bak inurl:"htaccess|passwd|shadow|htusers"
+filetype:bak inurl:\"htaccess|passwd|shadow|htusers\" 
+filetype:conf inurl:firewall -intitle:cvs 
+filetype:conf inurl:proftpd. PROFTP FTP server configuration file reveals
+filetype:dat "password.dat
+filetype:dat \"password.dat\" 
+filetype:eml eml +intext:"Subject" +intext:"From" +intext:"To"
+filetype:eml eml +intext:\"Subject\" +intext:\"From\" +intext:\"To\" 
+filetype:eml eml +intext:”Subject” +intext:”From” +intext:”To”
+filetype:inc dbconn 
+filetype:inc intext:mysql_connect
+filetype:inc mysql_connect OR mysql_pconnect 
+filetype:log inurl:"password.log"
+filetype:log inurl:password.log
+filetype:log username putty PUTTY SSH client logs can reveal usernames
+filetype:log “PHP Parse error” | “PHP Warning” | “PHP Error”
+filetype:log
+filetype:mdb inurl:users.mdb
+filetype:ora ora
+filetype:php
+filetype:aspx
+filetype:swf (Shockwave Flash)
+filetype:ora tnsnames
+filetype:pass pass intext:userid
+filetype:pdf "Assessment Report" nessus
+filetype:pem intext:private
+filetype:properties inurl:db intext:password
+filetype:pst inurl:"outlook.pst"
+filetype:pst pst -from -to -date
+filetype:reg reg +intext:"defaultusername" +intext:"defaultpassword"
+filetype:reg reg +intext:\"defaultusername\" +intext:\"defaultpassword\" 
+filetype:reg reg +intext:â? WINVNC3â?
+filetype:reg reg +intext:”defaultusername” +intext:”defaultpassword”
+filetype:reg reg HKEY_ Windows Registry exports can reveal
+filetype:reg reg HKEY_CURRENT_USER SSHHOSTKEYS
+filetype:sql "insert into" (pass|passwd|password)
+filetype:sql ("values * MD5" | "values * password" | "values * encrypt")
 site:target.comfiletype:sql (\"passwd values\" | \"password values\" | \"pass values\" ) 
-site:target.com filetype:sql (\"values * MD\" | \"values * password\" | \"values * encrypt\") 
-site:target.com filetype:sql +"IDENTIFIED BY" -cvs
-site:target.com filetype:sql password
-site:target.com filetype:sql password 
-site:target.com filetype:sql “insert into” (pass|passwd|password)
-site:target.com filetype:url +inurl:"ftp://" +inurl:";@"
-site:target.com filetype:url +inurl:\"ftp://\" +inurl:\";@\" 
-site:target.com filetype:url +inurl:”ftp://” +inurl:”;@”
-site:target.com filetype:xls inurl:"email.xls"
-site:target.com filetype:xls username password email
-site:target.com index of: intext:Gallery in Configuration mode
-site:target.com index.of passlist
-site:target.com index.of perform.ini mIRC IRC ini file can list IRC usernames and
-site:target.com index.of.dcim 
-site:target.com index.of.password 
-site:target.com intitle:"index of" +myd size
-site:target.com intitle:"index of" etc/shadow
-site:target.com intitle:"index of" htpasswd
-site:target.com intitle:"index of" intext:connect.inc
-site:target.com intitle:"index of" intext:globals.inc
-site:target.com intitle:"index of" master.passwd
-site:target.com intitle:"index of" master.passwd 007电脑资讯
-site:target.com intitle:"index of" members OR accounts
-site:target.com intitle:"index of" mysql.conf OR mysql_config
-site:target.com intitle:"index of" passwd
-site:target.com intitle:"index of" people.lst
-site:target.com intitle:"index of" pwd.db
-site:target.com intitle:"index of" spwd
-site:target.com intitle:"index of" user_carts OR user_cart
-site:target.com intitle:"index.of *" admin news.asp configview.asp
-site:target.com intitle:("TrackerCam Live Video")|("TrackerCam Application Login")|("Trackercam Remote") -trackercam.com
-site:target.com intitle:(“TrackerCam Live Video”)|(“TrackerCam Application Login”)|(“Trackercam Remote”) -trackercam.com
-site:target.com inurl:admin inurl:userlist Generic userlist files
-site:target.com inurl:php?=id1
-site:target.com inurl:index.php?id=
-site:target.com inurl:trainers.php?id=
-site:target.com inurl:buy.php?category=
-site:target.com inurl:article.php?ID=
-site:target.com inurl:play_old.php?id=
-site:target.com inurl:declaration_more.php?decl_id=
-site:target.com inurl:pageid=
-site:target.com inurl:games.php?id=
-site:target.com inurl:page.php?file=
-site:target.com inurl:newsDetail.php?id=
-site:target.com inurl:gallery.php?id=
-site:target.com inurl:article.php?id=
-site:target.com inurl:show.php?id=
-site:target.com inurl:staff_id=
-site:target.com inurl:newsitem.php?num= andinurl:index.php?id=
-site:target.com inurl:trainers.php?id=
-site:target.com inurl:buy.php?category=
-site:target.com inurl:article.php?ID=
-site:target.com inurl:play_old.php?id=
-site:target.com inurl:declaration_more.php?decl_id=
-site:target.com inurl:pageid=
-site:target.com inurl:games.php?id=
-site:target.com inurl:page.php?file=
-site:target.com inurl:newsDetail.php?id=
-site:target.com inurl:gallery.php?id=
-site:target.com inurl:article.php?id=
-site:target.com inurl:show.php?id=
-site:target.com inurl:staff_id=
-site:target.com inurl:newsitem.php?num=
-site:target.com intext:" -FrontPage-" ext:pwd inurl:(service | authors | administrators | users)
-site:target.com intext:""BiTBOARD v2.0" BiTSHiFTERS Bulletin Board"
-site:target.com intext:"# -FrontPage-" ext:pwd inurl:(service | authors | administrators | users) "# -FrontPage-" site:target.com inurl:service.pwd
-site:target.com intext:"#mysql dump" filetype:sql
-site:target.com intext:"#mysql dump" filetype:sql 21232f297a57a5a743894a0e4a801fc3
-site:target.com intext:"A syntax error has occurred" filetype:ihtml
-site:target.com intext:"ASP.NET_SessionId" "data source="
-site:target.com intext:"About Mac OS Personal Web Sharing"
-site:target.com intext:"An illegal character has been found in the statement" -"previous message"
-site:target.com intext:"AutoCreate=TRUE password=*"
-site:target.com intext:"Can't connect to local" intitle:warning
-site:target.com intext:"Certificate Practice Statement" filetype:PDF | DOC
-site:target.com intext:"Certificate Practice Statement" inurl:(PDF | DOC)
-site:target.com intext:"Copyright (c) Tektronix, Inc." "printer status"
-site:target.com intext:"Copyright © Tektronix, Inc." "printer status"
-site:target.com intext:"Emergisoft web applications are a part of our"
-site:target.com intext:"Error Diagnostic Information" intitle:"Error Occurred While"
-site:target.com intext:"Error Message : Error loading required libraries."
-site:target.com intext:"Fatal error: Call to undefined function" -reply -the -next
-site:target.com intext:"Generated   by phpSystem"
-site:target.com intext:"Generated by phpSystem"
-site:target.com intext:"Host Vulnerability Summary Report"
-site:target.com intext:"HostingAccelerator" intitle:"login" +"Username" -"news" -demo
-site:target.com intext:"IMail Server Web Messaging" intitle:login
-site:target.com intext:"Incorrect syntax near"
-site:target.com intext:"Index of" /"chat/logs"
-site:target.com intext:"Index of /network" "last modified"
-site:target.com intext:"Index of /" +.htaccess
-site:target.com intext:"Index of /" +passwd
-site:target.com intext:"Index of /" +password.txt
-site:target.com intext:"Index of /admin"
-site:target.com intext:"Index of /backup"
-site:target.com intext:"Index of /mail"
-site:target.com intext:"Index of /password"
-site:target.com intext:"Microsoft (R) Windows * (TM) Version * DrWtsn32 Copyright (C)" ext:log
-site:target.com intext:"Microsoft CRM : Unsupported Browser Version"
-site:target.com intext:"Microsoft ® Windows * ™ Version * DrWtsn32 Copyright ©" ext:log
-site:target.com intext:"Network Host Assessment Report" "Internet Scanner"
-site:target.com intext:"Network Vulnerability   Assessment Report"
-site:target.com intext:"Network Vulnerability Assessment Report"
-site:target.com intext:"Network Vulnerability Assessment Report" 本文来自 pc007.com
-site:target.com intext:"SQL Server Driver][SQL Server]Line 1: Incorrect syntax near"
-site:target.com intext:"Thank you for your order"   +receipt
-site:target.com intext:"Thank you for your order" +receipt
-site:target.com intext:"Thank you for your purchase" +download
-site:target.com intext:"The following report contains confidential information" vulnerability -search
-site:target.com intext:"phpMyAdmin MySQL-Dump" "INSERT INTO" -"the"
-site:target.com intext:"phpMyAdmin MySQL-Dump" filetype:txt
-site:target.com intext:"phpMyAdmin" "running on" inurl:"main.php"
-site:target.com intextpassword | passcode)   intextusername | userid | user) filetype:csv
-site:target.com intextpassword | passcode) intextusername | userid | user) filetype:csv
-site:"target.com" intext:"PAGE NOT FOUND" | intext:"project not found" | intext:"Repository not found"  | intext:"domain does not exist" | intext:"This page could not be found" | intext:"404 Blog is not found" | intext:"No settings were found for this company" | intext:"domain name is invalid"
-
-🗲  🗲   🗲 Subdomains 🗲  🗲  🗲
-
-site:"*.target.com" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
-site:*.target.com ext:jsp | ext:asp | ext:aspx | ext:pl | ext:cfm | ext:py | ext:rb
-site:*.target.com ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml) (intext:confidential salary | site:*.target.com intext:"budget approved") inurl:confidential
-site:*.target.com ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml) (intext:confidential salary | site:*.target.com intext:”budget approved”) inurl:confidential
-site:*.target.com ext:inc "pwd=" "UID="
-site:*.target.com ext:ini intext:env.ini
-site:*.target.com ext:ini Version=... password
-site:*.target.com ext:ini Version=4.0.0.4 password
-site:*.target.com ext:ini eudora.ini
-site:*.target.com ext:ini intext:env.ini
-site:*.target.com ext:log "Software: Microsoft Internet Information Services *.*"
-site:*.target.com ext:log "Software: Microsoft Internet Information
-site:*.target.com ext:log "Software: Microsoft Internet Information Services *.*"
-site:*.target.com ext:log \"Software: Microsoft Internet Information Services *.*\"
-site:*.target.com ext:mdb   inurl:*.mdb inurl:fpdb shop.mdb
-site:*.target.com ext:mdb inurl:*.mdb inurl:fpdb shop.mdb
-site:*.target.com ext:mdb inurl:*.mdb inurl:fpdb shop.mdb
-site:*.target.com ext:php 
-site:"*.target.com" ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
-site:*.target.com ext:jsp | ext:asp | ext:aspx | ext:pl | ext:cfm | ext:py | ext:rb
-site:*.target.com filetype:SWF SWF
-site:*.target.com filetype:TXT TXT
-site:*.target.com filetype:XLS XLS
-site:*.target.com filetype:asp   DBQ=" * Server.MapPath("*.mdb")
-site:*.target.com filetype:asp "Custom Error Message" Category Source
-site:*.target.com filetype:asp + "[ODBC SQL"
-site:*.target.com filetype:asp DBQ=" * Server.MapPath("*.mdb")
-site:*.target.com filetype:asp DBQ=\" * Server.MapPath(\"*.mdb\") 
-site:*.target.com filetype:asp “Custom Error Message” Category Source
-site:*.target.com filetype:bak createobject sa
-site:*.target.com filetype:bak inurl:"htaccess|passwd|shadow|htusers"
-site:*.target.com filetype:bak inurl:\"htaccess|passwd|shadow|htusers\" 
-site:*.target.com filetype:conf inurl:firewall -intitle:cvs 
-site:*.target.com filetype:conf inurl:proftpd. PROFTP FTP server configuration file reveals
-site:*.target.com filetype:dat "password.dat
-site:*.target.com filetype:dat \"password.dat\" 
-site:*.target.com filetype:eml eml +intext:"Subject" +intext:"From" +intext:"To"
-site:*.target.com filetype:eml eml +intext:\"Subject\" +intext:\"From\" +intext:\"To\" 
-site:*.target.com filetype:eml eml +intext:”Subject” +intext:”From” +intext:”To”
-site:*.target.com filetype:inc dbconn 
-site:*.target.com filetype:inc intext:mysql_connect
-site:*.target.com filetype:inc mysql_connect OR mysql_pconnect 
-site:*.target.com filetype:log inurl:"password.log"
-site:*.target.com filetype:log username putty PUTTY SSH client logs can reveal usernames
-site:*.target.com filetype:log “PHP Parse error” | “PHP Warning” | “PHP Error”
-site:*.target.com filetype:mdb inurl:users.mdb
-site:*.target.com filetype:ora ora
-site:*.target.com filetype:php
-site:*.target.com filetype:aspx
-site:*.target.com filetype:swf (Shockwave Flash)
-site:*.target.com filetype:ora tnsnames
-site:*.target.com filetype:pass pass intext:userid
-site:*.target.com filetype:pdf "Assessment Report" nessus
-site:*.target.com filetype:pem intext:private
-site:*.target.com filetype:properties inurl:db intext:password
-site:*.target.com filetype:pst inurl:"outlook.pst"
-site:*.target.com filetype:pst pst -from -to -date
-site:*.target.com filetype:reg reg +intext:"defaultusername" +intext:"defaultpassword"
-site:*.target.com filetype:reg reg +intext:\"defaultusername\" +intext:\"defaultpassword\" 
-site:*.target.com filetype:reg reg +intext:â? WINVNC3â?
-site:*.target.com filetype:reg reg +intext:”defaultusername” +intext:”defaultpassword”
-site:*.target.com filetype:reg reg HKEY_ Windows Registry exports can reveal
-site:*.target.com filetype:reg reg HKEY_CURRENT_USER SSHHOSTKEYS
-site:*.target.com filetype:sql "insert into" (pass|passwd|password)
-site:*.target.com filetype:sql ("values * MD5" | "values * password" | "values * encrypt")
-site:*.target.comfiletype:sql (\"passwd values\" | \"password values\" | \"pass values\" ) 
-site:*.target.com filetype:sql (\"values * MD\" | \"values * password\" | \"values * encrypt\") 
-site:*.target.com filetype:sql +"IDENTIFIED BY" -cvs
-site:*.target.com filetype:sql password
-site:*.target.com filetype:sql password 
-site:*.target.com filetype:sql “insert into” (pass|passwd|password)
-site:*.target.com filetype:url +inurl:"ftp://" +inurl:";@"
-site:*.target.com filetype:url +inurl:\"ftp://\" +inurl:\";@\" 
-site:*.target.com filetype:url +inurl:”ftp://” +inurl:”;@”
-site:*.target.com filetype:xls inurl:"email.xls"
-site:*.target.com filetype:xls username password email
-site:*.target.com index of: intext:Gallery in Configuration mode
-site:*.target.com index.of passlist
-site:*.target.com index.of perform.ini mIRC IRC ini file can list IRC usernames and
-site:*.target.com index.of.dcim 
-site:*.target.com index.of.password 
-site:*.target.com intitle:"index of" +myd size
-site:*.target.com intitle:"index of" etc/shadow
-site:*.target.com intitle:"index of" htpasswd
-site:*.target.com intitle:"index of" intext:connect.inc
-site:*.target.com intitle:"index of" intext:globals.inc
-site:*.target.com intitle:"index of" master.passwd
-site:*.target.com intitle:"index of" master.passwd 007电脑资讯
-site:*.target.com intitle:"index of" members OR accounts
-site:*.target.com intitle:"index of" mysql.conf OR mysql_config
-site:*.target.com intitle:"index of" passwd
-site:*.target.com intitle:"index of" people.lst
-site:*.target.com intitle:"index of" pwd.db
-site:*.target.com intitle:"index of" spwd
-site:*.target.com intitle:"index of" user_carts OR user_cart
-site:*.target.com intitle:"index.of *" admin news.asp configview.asp
-site:*.target.com intitle:("TrackerCam Live Video")|("TrackerCam Application Login")|("Trackercam Remote") -trackercam.com
-site:*.target.com intitle:(“TrackerCam Live Video”)|(“TrackerCam Application Login”)|(“Trackercam Remote”) -trackercam.com
-site:*.target.com inurl:admin inurl:userlist Generic userlist files
-site:*.target.com inurl:php?=id1
-site:*.target.com inurl:index.php?id=
-site:*.target.com inurl:trainers.php?id=
-site:*.target.com inurl:buy.php?category=
-site:*.target.com inurl:article.php?ID=
-site:*.target.com inurl:play_old.php?id=
-site:*.target.com inurl:declaration_more.php?decl_id=
-site:*.target.com inurl:pageid=
-site:*.target.com inurl:games.php?id=
-site:*.target.com inurl:page.php?file=
-site:*.target.com inurl:newsDetail.php?id=
-site:*.target.com inurl:gallery.php?id=
-site:*.target.com inurl:article.php?id=
-site:*.target.com inurl:show.php?id=
-site:*.target.com inurl:staff_id=
-site:*.target.com inurl:newsitem.php?num= andinurl:index.php?id=
-site:*.target.com inurl:trainers.php?id=
-site:*.target.com inurl:buy.php?category=
-site:*.target.com inurl:article.php?ID=
-site:*.target.com inurl:play_old.php?id=
-site:*.target.com inurl:declaration_more.php?decl_id=
-site:*.target.com inurl:pageid=
-site:*.target.com inurl:games.php?id=
-site:*.target.com inurl:page.php?file=
-site:*.target.com inurl:newsDetail.php?id=
-site:*.target.com inurl:gallery.php?id=
-site:*.target.com inurl:article.php?id=
-site:*.target.com inurl:show.php?id=
-site:*.target.com inurl:staff_id=
-site:*.target.com inurl:newsitem.php?num=
-site:*.target.com intext:" -FrontPage-" ext:pwd inurl:(service | authors | administrators | users)
-site:*.target.com intext:""BiTBOARD v2.0" BiTSHiFTERS Bulletin Board"
-site:*.target.com intext:"# -FrontPage-" ext:pwd inurl:(service | authors | administrators | users) "# -FrontPage-" site:*.target.com inurl:service.pwd
-site:*.target.com intext:"#mysql dump" filetype:sql
-site:*.target.com intext:"#mysql dump" filetype:sql 21232f297a57a5a743894a0e4a801fc3
-site:*.target.com intext:"A syntax error has occurred" filetype:ihtml
-site:*.target.com intext:"ASP.NET_SessionId" "data source="
-site:*.target.com intext:"About Mac OS Personal Web Sharing"
-site:*.target.com intext:"An illegal character has been found in the statement" -"previous message"
-site:*.target.com intext:"AutoCreate=TRUE password=*"
-site:*.target.com intext:"Can't connect to local" intitle:warning
-site:*.target.com intext:"Certificate Practice Statement" filetype:PDF | DOC
-site:*.target.com intext:"Certificate Practice Statement" inurl:(PDF | DOC)
-site:*.target.com intext:"Copyright (c) Tektronix, Inc." "printer status"
-site:*.target.com intext:"Copyright © Tektronix, Inc." "printer status"
-site:*.target.com intext:"Emergisoft web applications are a part of our"
-site:*.target.com intext:"Error Diagnostic Information" intitle:"Error Occurred While"
-site:*.target.com intext:"Error Message : Error loading required libraries."
-site:*.target.com intext:"Fatal error: Call to undefined function" -reply -the -next
-site:*.target.com intext:"Generated   by phpSystem"
-site:*.target.com intext:"Generated by phpSystem"
-site:*.target.com intext:"Host Vulnerability Summary Report"
-site:*.target.com intext:"HostingAccelerator" intitle:"login" +"Username" -"news" -demo
-site:*.target.com intext:"IMail Server Web Messaging" intitle:login
-site:*.target.com intext:"Incorrect syntax near"
-site:*.target.com intext:"Index of" /"chat/logs"
-site:*.target.com intext:"Index of /network" "last modified"
-site:*.target.com intext:"Index of /" +.htaccess
-site:*.target.com intext:"Index of /" +passwd
-site:*.target.com intext:"Index of /" +password.txt
-site:*.target.com intext:"Index of /admin"
-site:*.target.com intext:"Index of /backup"
-site:*.target.com intext:"Index of /mail"
-site:*.target.com intext:"Index of /password"
-site:*.target.com intext:"Microsoft (R) Windows * (TM) Version * DrWtsn32 Copyright (C)" ext:log
-site:*.target.com intext:"Microsoft CRM : Unsupported Browser Version"
-site:*.target.com intext:"Microsoft ® Windows * ™ Version * DrWtsn32 Copyright ©" ext:log
-site:*.target.com intext:"Network Host Assessment Report" "Internet Scanner"
-site:*.target.com intext:"Network Vulnerability   Assessment Report"
-site:*.target.com intext:"Network Vulnerability Assessment Report"
-site:*.target.com intext:"Network Vulnerability Assessment Report" 本文来自 pc007.com
-site:*.target.com intext:"SQL Server Driver][SQL Server]Line 1: Incorrect syntax near"
-site:*.target.com intext:"Thank you for your order"   +receipt
-site:*.target.com intext:"Thank you for your order" +receipt
-site:*.target.com intext:"Thank you for your purchase" +download
-site:*.target.com intext:"The following report contains confidential information" vulnerability -search
-site:*.target.com intext:"phpMyAdmin MySQL-Dump" "INSERT INTO" -"the"
-site:*.target.com intext:"phpMyAdmin MySQL-Dump" filetype:txt
-site:*.target.com intext:"phpMyAdmin" "running on" inurl:"main.php"
-site:*.target.com intextpassword | passcode)   intextusername | userid | user) filetype:csv
-site:*.target.com intextpassword | passcode) intextusername | userid | user) filetype:csv
-site:"*.target.com" intext:"PAGE NOT FOUND" | intext:"project not found" | intext:"Repository not found"  | intext:"domain does not exist" | intext:"This page could not be found" | intext:"404 Blog is not found" | intext:"No settings were found for this company" | intext:"domain name is invalid"
+filetype:sql (\"values * MD\" | \"values * password\" | \"values * encrypt\") 
+filetype:sql +"IDENTIFIED BY" -cvs
+filetype:sql password
+filetype:sql password 
+filetype:sql “insert into” (pass|passwd|password)
+filetype:url +inurl:"ftp://" +inurl:";@"
+filetype:url +inurl:\"ftp://\" +inurl:\";@\" 
+filetype:url +inurl:”ftp://” +inurl:”;@”
+filetype:xls inurl:"email.xls"
+filetype:xls username password email
+filetype:log "PHP Parse error" | "PHP Warning" | "PHP Error"
+filetype:log "See `ipsec --copyright"
+filetype:log access.log -CVS
+filetype:log cron.log
+filetype:log intext:"ConnectionManager2"
+filetype:log inurl:nginx
+filetype:log inurl:database
+filetype:log inurl:bin
+filetype:syslog
+index of: intext:Gallery in Configuration mode
+index.of passlist
+index.of perform.ini mIRC IRC ini file can list IRC usernames and
+index.of.dcim 
+index.of.password 
+intitle:"index of" +myd size
+intitle:"index of" etc/shadow
+intitle:"index of" htpasswd
+intitle:"index of" intext:connect.inc
+intitle:"index of" intext:globals.inc
+intitle:"index of" master.passwd
+intitle:"index of" master.passwd 007电脑资讯
+intitle:"index of" members OR accounts
+intitle:"index of" mysql.conf OR mysql_config
+intitle:"index of" passwd
+intitle:"index of" people.lst
+intitle:"index of" pwd.db
+intitle:"index of" spwd
+intitle:"index of" user_carts OR user_cart
+intitle:"index of" 
+intitle:"index.of *" admin news.asp configview.asp
+intitle:index.of cleanup.log
+intitle:index.of filetype:log
+intitle:index.of log
+intitle:"grafana" inurl:"/grafana/login" "Forgot your password"
+intitle:("TrackerCam Live Video")|("TrackerCam Application Login")|("Trackercam Remote") -trackercam.com
+intitle:(“TrackerCam Live Video”)|(“TrackerCam Application Login”)|(“Trackercam Remote”) -trackercam.com
+inurl:admin inurl:userlist Generic userlist files
+inurl:php?=id1
+inurl:index.php?id=
+inurl:trainers.php?id=
+inurl:buy.php?category=
+inurl:article.php?ID=
+inurl:play_old.php?id=
+inurl:declaration_more.php?decl_id=
+inurl:pageid=
+inurl:games.php?id=
+inurl:page.php?file=
+inurl:newsDetail.php?id=
+inurl:gallery.php?id=
+inurl:article.php?id=
+inurl:show.php?id=
+inurl:staff_id=
+inurl:newsitem.php?num= andinurl:index.php?id=
+inurl:trainers.php?id=
+inurl:buy.php?category=
+inurl:article.php?ID=
+inurl:play_old.php?id=
+inurl:declaration_more.php?decl_id=
+inurl:pageid=
+inurl:games.php?id=
+inurl:page.php?file=
+inurl:newsDetail.php?id=
+inurl:gallery.php?id=
+inurl:article.php?id=
+inurl:show.php?id=
+inurl:staff_id=
+inurl:newsitem.php?num=
+inurl:confidential
+inurl:config pass
+inurl:config secret
+inurl:config.php dbpasswd
+inurl:config.php pass
+inurl:config.php password
+inurl:configuration
+inurl:env
+inurl:nginx filetype:log
+inurl:& intext:admin intext:login
+inurl:setting
+inurl:& intext:search
+inurl:error filetype:log
+inurl:backup
+inurl:backup.rar
+inurl:backup.sql
+inurl:setup.sql
+inurl:mysql.sql
+inurl:db.sqlite
+inurl:users.sql
+inurl:db filetype:sql
+inurl:db.sql
+inurl:backup filetype:sql
+inurl:save filetype:sql
+inurl:web.zip
+inurl:website.zip
+filetype:bak
+filetype:abk
+inurl:backup "Parent Directory"
+inurl:backup.zip
+inurl:quiz inurl:&
+inurl:.git-credentials
+inurl:.gitconfig
+intitle:"index of" ".gitignore"
+inurl:Makefile.toml
+intext:" -FrontPage-" ext:pwd inurl:(service | authors | administrators | users)
+intext:""BiTBOARD v2.0" BiTSHiFTERS Bulletin Board"
+intext:"# -FrontPage-" ext:pwd inurl:(service | authors | administrators | users) "# -FrontPage-" inurl:service.pwd
+intext:"#mysql dump" filetype:sql
+intext:"#mysql dump" filetype:sql 21232f297a57a5a743894a0e4a801fc3
+intext:"A syntax error has occurred" filetype:ihtml
+intext:"ASP.NET_SessionId" "data source="
+intext:"About Mac OS Personal Web Sharing"
+intext:"An illegal character has been found in the statement" -"previous message"
+intext:"AutoCreate=TRUE password=*"
+intext:"Can't connect to local" intitle:warning
+intext:"Certificate Practice Statement" filetype:PDF | DOC
+intext:"Certificate Practice Statement" inurl:(PDF | DOC)
+intext:"Copyright (c) Tektronix, Inc." "printer status"
+intext:"Copyright © Tektronix, Inc." "printer status"
+intext:"Emergisoft web applications are a part of our"
+intext:"Error Diagnostic Information" intitle:"Error Occurred While"
+intext:"Error Message : Error loading required libraries."
+intext:"Fatal error: Call to undefined function" -reply -the -next
+intext:"Generated   by phpSystem"
+intext:"Generated by phpSystem"
+intext:"Host Vulnerability Summary Report"
+intext:"HostingAccelerator" intitle:"login" +"Username" -"news" -demo
+intext:"IMail Server Web Messaging" intitle:login
+intext:"Incorrect syntax near"
+intext:"Index of" /"chat/logs"
+intext:"Index of /network" "last modified"
+intext:"Index of /" +.htaccess
+intext:"Index of /" +passwd
+intext:"Index of /" +password.txt
+intext:"Index of /admin"
+intext:"Index of /backup"
+intext:"Index of /mail"
+intext:"Index of /password"
+intext:"Microsoft (R) Windows * (TM) Version * DrWtsn32 Copyright (C)" ext:log
+intext:"Microsoft CRM : Unsupported Browser Version"
+intext:"Microsoft ® Windows * ™ Version * DrWtsn32 Copyright ©" ext:log
+intext:"Network Host Assessment Report" "Internet Scanner"
+intext:"Network Vulnerability   Assessment Report"
+intext:"Network Vulnerability Assessment Report"
+intext:"Network Vulnerability Assessment Report" 本文来自 pc007.com
+intext:"SQL Server Driver][SQL Server]Line 1: Incorrect syntax near"
+intext:"Thank you for your order"   +receipt
+intext:"Thank you for your order" +receipt
+intext:"Thank you for your purchase" +download
+intext:"The following report contains confidential information" vulnerability -search
+intext:"phpMyAdmin MySQL-Dump" "INSERT INTO" -"the"
+intext:"phpMyAdmin MySQL-Dump" filetype:txt
+intext:"phpMyAdmin" "running on" inurl:"main.php"
+intextpassword | passcode)   intextusername | userid | user) filetype:csv
+intextpassword | passcode) intextusername | userid | user) filetype:csv
+intext:"PAGE NOT FOUND" | intext:"project not found" | intext:"Repository not found"  | intext:"domain does not exist" | intext:"This page could not be found" | intext:"404 Blog is not found" | intext:"No settings were found for this company" | intext:"domain name is invalid"
+intext:confidential salary | intext:"budget approved"
+allintext:username filetype:log
+create table  filetype:sql
+"-- MySQL dump" "Server version" "Table structure for table"
+company filetype:xls
+company filetype:cvs
+".git" intitle:"Index of"
+(intext:"index of /.git") ("parent directory")
+"Parent Directory" "Last modified" git
