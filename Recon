@@ -45,6 +45,12 @@
   🗲ffuf -u https://target.com/admin/FUZZ -w /home/wordlists/common.txt -mc 200
   🗲ffuf -w /home/wordlists/common.txt -u https://target.com/FUZZ -fs 1111 => does not show sizes 1111
 
+#Gobuster (https://github.com/OJ/gobuster)
+  🗲gobuster dir -u http://internal.thm/ -w /usr/share/wordlists/dirb/common.txt
+  🗲gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 10.10.10.56/cgi-bin/ -x sh,cgi,pl -t 200
+  🗲gobuster dir --url target.com --wordlist /home/wordlist/common.txt --threads 10 --delay 1s --useragent 'ferhatkrs0-hackerone' --headres 'X-Hackerone: ferhatkrs0'
+
+
 #Paramspider (https://github.com/devanshbatham/ParamSpider)
   Discover directories for a single domain:
   🗲paramspider -d example.com
