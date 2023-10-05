@@ -77,6 +77,10 @@
   🗲gau --subs --threads 3 --mc 200 --o urls.txt target.com
   🗲echo “example.com” | gau | grep .js | httpx -mc 200
   🗲cat domains.txt | gau --threads 5
+
+#LinkFinder (https://github.com/GerbenJavado/LinkFinder)
+  🗲python linkfinder.py -i https://example.com -d
+  🗲python linkfinder.py -i https://example.com/1.js -o results.html
   
 
 
