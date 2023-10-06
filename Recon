@@ -59,6 +59,8 @@
 
   🗲paramspider -d target.com --exclude png,jpg,gif,jpeg,swf,woff,gif,svg --level high --quiet -o result.txt
 
+#Parameth (https://github.com/maK-/parameth)
+ 🗲python parameth.py -u http://example.com/
 #Feroxbuster (https://github.com/epi052/feroxbuster)
   🗲./feroxbuster --url http://target.com --wordlist /home/wordlist/big.txt
 
