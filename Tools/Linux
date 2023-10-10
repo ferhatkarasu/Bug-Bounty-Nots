@@ -1,0 +1,84 @@
+🗲🗲🗲info commands🗲🗲🗲
+
+🗲whereis/which/whatis
+
+🗲whois
+  ->domainler hakkında bilgi verir
+
+🗲uname -a
+  ->kullanılan linux dağıtmının versiyonu vb. bilgilerini verir
+
+🗲strace /bin/suidso
+  ->suido dosyasını çalışırken takip edip inceler
+
+🗲locate ferhat
+  ->ferhat kullanıcısın içindeki dosyaları gösterir
+
+🗲apropos
+
+🗲grep
+
+🗲tee 
+	[cat test.txt | tee deneme.txt]or[cat test.txt | tee -a deneme.txt]
+	test.txt dosyasının içeriğini deneme.txt'ye yazar
+
+🗲getcap
+
+🗲string örnek
+  ->örnek programı hakkında bilgiler verir önemli
+
+🗲wc -l
+  ->dosyanın içindeki satırları sayar
+
+🗲sort and uniq
+	[sort file.txt | uniq > output.txt]or[sort file.txt | uniq | tee output.txt]
+	sort=dosyayı alfabeye göre dizer uniq=aynı satırları siler	
+
+🗲ps aux
+  ->kullanıcılar tarafından çalıştırılan dosyalar
+
+🗲locate my.txt
+  ->my.txt dosyamın bulunduğu dizinleri gösterir
+
+🗲lsb_release -a | cat /etc/*release
+  ->ikiside kullanılan linux dağıtımı hakkında detaylı bilgi verir
+
+🗲cat
+  ->cat /.bash_history
+  ->cat /etc/issue ->kullanılan linux dağıtımını gösterir
+	->cat /etc/issue OR cat /proc/version ->Versiyon ve sürüm bilgileri	için
+	->cat /etc/passwd -> kullanıcılara bakmak
+  ->cat /etc/*-release -> işletim sistemi hakkında detaylı bilgi verir
+	->cat /var/log/auth.log ->kullanıcı log kayıtlarını gösterir
+  ->cat /var/log/cron.log -> zamanlanmış görev kayıtlarını gösterir
+
+🗲crontab -e
+
+🗲lostlog
+  ->uzaktan sisteme oturum açmış kullanıcı bilgilerini verir
+
+🗲lostlog -u <user>
+  ->ilgili kullanıcının uzaktan en son ne zmana	oturum açtığını verir
+
+
+🗲PYTHON🗲
+  ->service apache2 start
+  ->python -m SimpleHTTPServer
+  ->python3 -m http.server
+
+
+🗲🗲🗲Privilege Escalation🗲🗲🗲
+
+https://gtfobins.github.io/
+https://book.hacktricks.xyz/linux-hardening/privilege-escalation
+https://prnt.sc/MXx1oaQy56Fb
+
+🗲sudo -l
+🗲su
+🗲find / -type f -iname ".*" -ls 2>/dev/null
+
+
+
+
+
+
