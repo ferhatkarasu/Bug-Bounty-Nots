@@ -82,10 +82,16 @@
 🗲LinkFinder (https://github.com/GerbenJavado/LinkFinder)
   python linkfinder.py -i https://example.com -d
   python linkfinder.py -i https://example.com/1.js -o results.html
-  
+
+🗲Nuclei (https://github.com/projectdiscovery/nuclei)
+  nuclei -u https://example.com
+  nuclei -list urls.txt
+
 
 🗲Nmap
-  nmap -sS -sV -p - --open <targetIP> -Pn -n
+  nmap -sS -sV -p - --open <IP> -Pn -n
+  nmap -sC -sV <IP> -v #Basic scan
+  nmap -T4 -A -p- <IP> -v #complete scan
 
 🗲Masscan
   masscan -iL ips.txt -8443,8888,8081,3000,9443 --rate=10000 --open
