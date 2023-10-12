@@ -173,11 +173,38 @@ inurl:newsitem.php?num=
 inurl:confidential
 inurl:config pass
 inurl:config secret
+inurl:redirect=
+inurl:/out?
+inurl:?view=
+inurl:returnTo=
+inurl:returnPath=
+inurl:checkoutUrl=
+inurl:return_path=
+inurl:go=
+inurl:checkout_url=
+inurl:return_to=
+inurl:/out/
+inurl:/cgi-bin/redirect.cgi?
+inurl:/login?to=
+inurl:continue=
+inurl:image_url=
+inurl:/redirect/
+inurl:return=
+inurl:redirectUrl=
 inurl:config.php dbpasswd
 inurl:config.php pass
 inurl:config.php password
 inurl:configuration
+inurl:redirect_uri=
+inurl:redirect_url=
+inurl:redirectUri=
+inurl:next=
+inurl:redir=
+inurl:rurl=
 inurl:env
+inurl:target=
+inurl:destination=
+inurl:dest=
 inurl:nginx filetype:log
 inurl:& intext:admin intext:login
 inurl:setting
