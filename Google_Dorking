@@ -150,6 +150,7 @@ inurl:gallery.php?id=
 inurl:article.php?id=
 inurl:show.php?id=
 inurl:tech "login"
+inurl:url=
 inurl:"adminLogin/" intitle:"Admin Panel"
 inurl:/phpMyAdmin/index.php?server=1
 inurl:staff_id=
