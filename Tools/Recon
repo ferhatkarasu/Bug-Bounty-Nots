@@ -39,11 +39,12 @@
   dirsearch -L allsubdomains.txt -e json,html -r -x 500,400 -t 100
   dirsearch -L allsubdomains.txt -e json,html -r -x 500,400 -t 100 -w /home/wordlists/common.txt
 
-🗲Fuff (https://github.com/ffuf/ffuf)
+🗲Ffuf (https://github.com/ffuf/ffuf)
   ffuf -w /home/wordlists/common.txt -u https://target.com/FUZZ -e .php,.php.bak,.js,.json,.txt,.sql,.tar.gz,.bkp,.html,.htm,.zip -mc 200,301 -ac
   ffuf -u https://targett.com/FUZZ -w /usr/share/wordlists/dirb/common.txt/
   ffuf -u https://target.com/admin/FUZZ -w /home/wordlists/common.txt -mc 200
   ffuf -w /home/wordlists/common.txt -u https://target.com/FUZZ -fs 1111 => does not show sizes 1111
+  ffuf -w <(seq 0 110) -u https://target.com/FUZZ
 
 🗲Gobuster (https://github.com/OJ/gobuster)
   gobuster dir -u http://internal.thm/ -w /usr/share/wordlists/dirb/common.txt
