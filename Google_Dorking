@@ -1,3 +1,11 @@
+🗲 https://github.com/Proviesec/google-dorks
+🗲 https://gist.github.com/clarketm/919457847cece7ce40323dc217623054
+🗲 https://github.com/spekulatius/infosec-dorks
+-------------------------------------------------
+site:target.com
+site:*.target.com
+site:*.*.target.com
+-------------------------------------------------
 ext:log | ext:txt | ext:conf | ext:php | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~
 ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:jsp | ext:asp | ext:aspx | ext:pl | ext:cfm | ext:py | ext:rb | ext:xml
 ext:logext:ini | ext:env | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
@@ -318,14 +326,6 @@ company filetype:cvs
 "Login Pages":"site:target.com inurl:login | inurl:signin | intitle:Login | intitle: signin | inurl:auth"
 php jembut.php "/account/login/"
 php jembut.php "/customer/account/login/referer/"
-
-
-
--------------------------------------------------
-
-🗲 https://github.com/Proviesec/google-dorks
-🗲 https://gist.github.com/clarketm/919457847cece7ce40323dc217623054
-🗲 https://github.com/spekulatius/infosec-dorks
 
 
 
