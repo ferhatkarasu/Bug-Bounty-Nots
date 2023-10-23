@@ -1,5 +1,4 @@
 
-Sqli saldırılarında ilk önce veri tabanının versiyonun öğrenmek hazırlayacağımız payloadlar açısından bize fayda sağlar, versiyonu öğrenemeye öncelik vermek lazım.
 (Knowing what database we are dealing with makes it easier to understand how to construct our malicious queries)
 
 🗲Login Page🗲
