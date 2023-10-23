@@ -65,6 +65,7 @@
   ->service apache2 start
   ->python -m SimpleHTTPServer
   ->python3 -m http.server
+  ->python -c 'import pty; pty.spawn("/bin/bash")'
 
 
 🗲🗲🗲Privilege Escalation🗲🗲🗲
@@ -73,9 +74,10 @@ https://gtfobins.github.io/
 https://book.hacktricks.xyz/linux-hardening/privilege-escalation
 https://prnt.sc/MXx1oaQy56Fb
 
-🗲sudo -l
-🗲su
-🗲find / -type f -iname ".*" -ls 2>/dev/null
+->sudo -l
+->su
+->find / -perm -4000 2>/dev/null
+->find / -type f -iname ".*" -ls 2>/dev/null
 
 
 
