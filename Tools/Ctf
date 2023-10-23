@@ -1,1 +1,21 @@
 
+
+---
+exiftool file : shows the metadata of the given file img için
+---
+scp james@10.10.46.195:/home/james/Alien_autospy.jpg /home/kali/agentsudo/pic
+---
+echo hash | base64 -d 
+OR
+echo '123414' | base64 -d
+---
+🗲
+exiftool file : shows the metadata of the given file img için
+---
+scp james@10.10.46.195:/home/james/Alien_autospy.jpg /home/kali/agentsudo/pic
+---
+echo hash | base64 -d 
+OR
+echo '123414' | base64 -d
+---
+🗲
