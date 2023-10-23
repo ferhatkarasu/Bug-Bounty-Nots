@@ -86,6 +86,11 @@ filetype:log inurl:nginx
 filetype:log inurl:database
 filetype:log inurl:bin
 filetype:syslog
+Fwd: intitle:"index of" "login" site:bd
+Fwd: Google Dork: inurl:login/login-user
+"index of" "cloudapp.net"
+"index of" "cloudapp.azure.com"
+index of /wp-admin.jpg site:bd
 index of: intext:Gallery in Configuration mode
 index.of passlist
 index.of perform.ini mIRC IRC ini file can list IRC usernames and
@@ -117,17 +122,34 @@ intitle:"index of" ".sql"
 intitle:"index of" ".ssh" OR "ssh_config" OR "ssh_known_hosts" OR "authorized_keys" OR "id_rsa" OR "id_dsa"
 intitle:"index of" inurl:app.conf
 intitle:"index of" "creds.txt"
+intitle:"Index of" inurl:/backup/ "wp-config"
+intitle:"index of" intext: "login.php"
+intitle:"index of" "config.txt"
+intitle:"index of" "postman_collection.json"
+intitle:"index of" "pass.txt"
 intitle:"index of" "backup.zip"
+intitle:"index of" "about-me"
 intitle:"index of" "login.php.txt"
 intitle:"index of" "configuration.txt"
 intitle:"index.of *" admin news.asp configview.asp
 intitle:"index of" "domain.txt"
 intitle:index.of cleanup.log
+intitle:"index of" "*.php"
+intitle:index.of intext:log site:.bd
+intitle:"Error log for /LM/".edu
 intitle:index.of filetype:log
 intitle:"index of" "npm-debug.log"
+intitle:"GlassFish Server - Server Running"
+intitle:"index of" "nginx.log"
+intitle:"index of" "contacts.txt"
+intitle:"index of" errors.log
 intitle:index.of log
+intitle:"index of" "*.phtml" site:.edu
 intitle:"index of" "C:Windows"
 intitle:"index of" "username.txt"
+intitle:"online portal login"
+intitle:"index of" "bugs.txt"
+intitle:"index of" "/userlist/"
 intitle:"Documentation Index" intext:"Apache Tomcat Servlet" inurl:"docs"
 intitle:"grafana" inurl:"/grafana/login" "Forgot your password"
 intitle:("TrackerCam Live Video")|("TrackerCam Application Login")|("Trackercam Remote") -trackercam.com
@@ -147,17 +169,19 @@ inurl:uux.aspx
 inurl:/admin.aspx
 inurl:pageid=
 inurl:/login.aspx
+inurl:"/spotfire/login.html"
 inurl:"/login.aspx" intitle:"adminlogin"
 inurl:"/geoserver/ows?service=wfs"
-intitle:"index of" "config.txt"
-intitle:"index of" "pass.txt"
 inurl:games.php?id=
+inurl:"/login.php" intitle:"admin"
 inurl:page.php?file=
 inurl:newsDetail.php?id=
 inurl:gallery.php?id=
 inurl:article.php?id=
 inurl:show.php?id=
+inurl:/ui/login.aspx
 inurl:tech "login"
+inurl:/signup.aspx
 inurl:url=
 inurl:"adminLogin/" intitle:"Admin Panel"
 inurl:/phpMyAdmin/index.php?server=1
@@ -168,9 +192,12 @@ inurl:trainers.php?id=
 inurl:buy.php?category=
 inurl:article.php?ID=
 inurl:play_old.php?id=
+inurl:"xslt?PAGE=C_4_0"
 inurl:declaration_more.php?decl_id=
 inurl:pageid=
+inurl:responsible disclosure
 inurl:games.php?id=
+inurl:/certs/server.key
 inurl:page.php?file=
 inurl:newsDetail.php?id=
 inurl:gallery.php?id=
@@ -244,6 +271,7 @@ inurl:save filetype:sql
 inurl:web.zip
 inurl:website.zip
 inurl:".s3.amazonaws.com/"
+initial:inurl:uux.aspx
 filetype:bak
 filetype:abk
 inurl:backup "Parent Directory"
@@ -277,6 +305,7 @@ intext:"Copyright (c) Tektronix, Inc." "printer status"
 intext:"Copyright © Tektronix, Inc." "printer status"
 intext:"Emergisoft web applications are a part of our"
 intext:"Error Diagnostic Information" intitle:"Error Occurred While"
+intext:"user name" intext:"orion core"
 intext:"Error Message : Error loading required libraries."
 intext:"Fatal error: Call to undefined function" -reply -the -next
 intext:"Generated   by phpSystem"
@@ -325,7 +354,9 @@ company filetype:cvs
 "Parent Directory" "Last modified" git
 "Login Pages":"site:target.com inurl:login | inurl:signin | intitle:Login | intitle: signin | inurl:auth"
 php jembut.php "/account/login/"
+"-- phpMyAdmin SQL Dump" ext:txt
 php jembut.php "/customer/account/login/referer/"
+Shopping Website Login Pages
 
 
 
