@@ -1,5 +1,6 @@
 🗲🗲🗲INFORMATION GATHERING (Subdomain, Directory, IP, Port)🗲🗲🗲
 
+[I'm an inline-style link](https://www.google.com)
 [🗲Subfinder](https://github.com/projectdiscovery/subfinder)
   subfinder -d target.com
   subfinder -d target.com -o subs.txt
