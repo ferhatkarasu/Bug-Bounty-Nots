@@ -1,12 +1,12 @@
 🗲🗲🗲INFORMATION GATHERING (Subdomain, Directory, IP, Port)🗲🗲🗲
 
-[I'm an inline-style link](https://www.google.com)
-[🗲Subfinder](https://github.com/projectdiscovery/subfinder)
+
+🗲Subfinder (https://github.com/projectdiscovery/subfinder)
   subfinder -d target.com
   subfinder -d target.com -o subs.txt
   subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
 
-[🗲Knockpy](https://github.com/guelfoweb/knock)
+🗲Knockpy (https://github.com/guelfoweb/knock)
   python3 knockpy.py target.com
   python3 knockpy.py target.com | tee subs.txt
 
