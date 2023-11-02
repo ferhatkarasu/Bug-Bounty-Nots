@@ -100,3 +100,6 @@
 
 🗲Masscan
   masscan -iL ips.txt -8443,8888,8081,3000,9443 --rate=10000 --open
+
+🗲BurpSuite
+  advencing-burp suite scope settings : ^.+google\.com$   port: ^443$  file: ^/.*
