@@ -1,7 +1,10 @@
 🗲
-exiftool file : shows the metadata of the given file img için
+exiftool file : shows the metadata of the given file
 🗲
 binwalk -e cutie.png
+🗲
+stegseek
+-> https://prnt.sc/jG0-ah3MBHCY
 🗲
 scp james@10.10.46.195:/home/james/Alien_autospy.jpg /home/kali/agentsudo/pic
 🗲
