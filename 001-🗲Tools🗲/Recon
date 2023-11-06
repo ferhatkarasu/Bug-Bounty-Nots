@@ -14,7 +14,6 @@
   python3 crtsh.py -d target.com
 
 🗲Amass (https://github.com/owasp-amass/amass)
-  amass intel -d target.com –whois
   amass enum -passive -d target.com
   amass enum -brute -d target.com
   amass enum -o amass.txt -d target.com
