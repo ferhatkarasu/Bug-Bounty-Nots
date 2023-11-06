@@ -65,7 +65,7 @@
   ->service apache2 start
   ->python -m SimpleHTTPServer
   ->python3 -m http.server
-  ->python -c 'import pty; pty.spawn("/bin/bash")'
+  ->python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 
 🗲🗲🗲Privilege Escalation🗲🗲🗲
