@@ -19,6 +19,9 @@
   amass enum -o amass.txt -d target.com
   amass enum -brute -active -d target.com -o amass.txt
 
+🗲Shadon
+  ip prefix taraması -> net:64.233.160.0/19
+  domain tarması -> org:"Google"
 
 🗲CurL
   Subdomain enemuration
