@@ -10,6 +10,7 @@ Top 25 Open Redirect Parameters for @lutfumertceylan (https://github.com/lutfume
 ?redirect_uri={payload}
 ?redirect_url={payload}
 ?redirect={payload}
+?redirection_url={payload}
 /redirect/{payload}
 /cgi-bin/redirect.cgi?{payload}
 /out/{payload}
