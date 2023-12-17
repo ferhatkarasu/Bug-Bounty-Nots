@@ -25,3 +25,12 @@ Top 25 Open Redirect Parameters for @lutfumertceylan (https://github.com/lutfume
 ?checkout_url={payload}
 ?continue={payload}
 ?return_path={payload}
+
+---
+#!/bin/bash
+#openRedirect.sh
+
+grep -E "next=|url=|target=|rurl=|dest=|destination=|redir=|redirect_uri=|redirect_url=|redirect=|redirection_url=|/redirect/|/cgi-bin/redirect.cgi|/out/|/out|view=|/loginto=|image_url=|go=|return=|returnTo=|return_to=|checkout_url=|continue=|return_path=" $1
+
+---
+
