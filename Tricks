@@ -1,8 +1,12 @@
 ---
-#Find newly added subdomains (https://www.youtube.com/watch?v=wP3n1JnqtMU&list=WL&index=813)
+#To enter the bash file.
+nano ~/.bash_profile -> dosyaya girmek için
+source ~/.bash_profile -> dosyayı kaydetmek için
+---
+#Find newly added subdomains. (https://www.youtube.com/watch?v=wP3n1JnqtMU&list=WL&index=813)
 https://prnt.sc/HbSkEvh44TBc - https://prnt.sc/5J27TG4cmakB
 ---
-#Create a wordlist for the target site (https://www.youtube.com/watch?v=W4_QCSIujQ4&pp=ygUSbmFoYW1zZWMgdG9tbm9tbm9t)
+#Create a wordlist for the target site. (https://www.youtube.com/watch?v=W4_QCSIujQ4&pp=ygUSbmFoYW1zZWMgdG9tbm9tbm9t)
   gau example.com | unfurl -u paths
   sed 's#/#\n#g' paths.txt | sort -u
 ---
