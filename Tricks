@@ -1,7 +1,7 @@
 ---
 #To enter the bash file.
-nano ~/.bash_profile -> dosyaya girmek için
-source ~/.bash_profile -> dosyayı kaydetmek için
+nano ~/.bash_profile -> to open the file
+source ~/.bash_profile -> to save the file
 ---
 #Find newly added subdomains. (https://www.youtube.com/watch?v=wP3n1JnqtMU&list=WL&index=813)
 https://prnt.sc/HbSkEvh44TBc - https://prnt.sc/5J27TG4cmakB
