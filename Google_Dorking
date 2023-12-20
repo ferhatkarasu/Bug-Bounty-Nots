@@ -2,6 +2,15 @@
 🗲 https://gist.github.com/clarketm/919457847cece7ce40323dc217623054
 🗲 https://github.com/spekulatius/infosec-dorks
 -------------------------------------------------
+#DorksHunter (https://github.com/six2dez/dorks_hunter)
+  ->python3 dorkshunter.py -d target.com
+  ->python3 dorkshunter.py -d target.com -r 2 -o output.txt
+
+
+
+
+
+-------------------------------------------------
 site:target.com
 site:*.target.com
 site:*.*.target.com
