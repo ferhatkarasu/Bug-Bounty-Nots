@@ -101,6 +101,11 @@
   #python3 domain_analyzer.py -d DOMAIN
   #python3 domain_analyzer.py -d DOMAIN -w -j -n -a
   
+🗲Hakrevdns (https://github.com/hakluke/hakrevdns)
+  ->Find domains among our target's IPs.
+  #prips 173.0.84.0/24 | hakrevdns
+  #cat ips.txt | hakrevdns
+  
 
 🗲Nmap
   #nmap -sC -sV <IP> -v #Basic scan
