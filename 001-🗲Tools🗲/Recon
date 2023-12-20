@@ -31,6 +31,7 @@
 🗲Httpx (https://github.com/projectdiscovery/httpx)
   #cat subdomains.txt | httpx -title -content-length -status-code -silent
   #httpx -l subdomains.txt -ports 80,8080,8000,8888 -threads 200 > subdomains_alive.txt
+  #httpx -l subs.txt -sc -td -title -probe -ip
 
 🗲Httprobe (https://github.com/tomnomnom/httprobe)
   #cat subdomains.txt | httprobe | tee -a subdomains_alive.txt
@@ -102,9 +103,10 @@
   
 
 🗲Nmap
-  #nmap -sS -sV -p - --open <IP> -Pn -n
   #nmap -sC -sV <IP> -v #Basic scan
-  #nmap -T4 -A -p- <IP> -v #complete scan
+  #nmap -sS -sV -p - --open <IP> -Pn -n #complete scan
+  #nmap -T4 -Pn -vv -n target.com
+  #nmap -sV -iL subdomains.txt -oN scaned-port.txt --script=vuln
 
 🗲Masscan
   #masscan -iL ips.txt -8443,8888,8081,3000,9443 --rate=10000 --open
