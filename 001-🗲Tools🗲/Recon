@@ -35,7 +35,7 @@
 🗲Httprobe (https://github.com/tomnomnom/httprobe)
   #cat subdomains.txt | httprobe | tee -a subdomains_alive.txt
   #cat subdomains.txt | httprobe -p http:81 -p http:3000 -p https:3000 -p http:3001 -p https:3001 -p http:8000 -p http:8080 -p https:8443 -c 50 | tee subdomains_alive.txt
-
+  #cat sub.txt | httprobe -p http:81 -p http:3000 -p https:3000 -p http:3001 -p https:3001 -p http:8000 -p http:8080 -p https:8443 -p https:10000 -p http:9000 -p https:9443 -c 50 | tee live-subs2.txt
 
 🗲Dirsearch (https://github.com/maurosoria/dirsearch)
   #dirsearch -u target.com
