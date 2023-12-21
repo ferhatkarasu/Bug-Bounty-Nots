@@ -45,6 +45,7 @@
   #dirsearch -L allsubdomains.txt -e json,html -r -x 500,400 -t 100 -w /home/wordlists/common.txt
 
 🗲Ffuf (https://github.com/ffuf/ffuf)
+  ->çıktıların renklenmesi için sonuna -c koy.
   #ffuf -w /home/wordlists/common.txt -u https://target.com/FUZZ -e .php,.php.bak,.js,.json,.txt,.sql,.tar.gz,.bkp,.html,.htm,.zip -mc 200,301 -ac
   #ffuf -u https://targett.com/FUZZ -w /usr/share/wordlists/dirb/common.txt/
   #ffuf -u https://target.com/admin/FUZZ -w /home/wordlists/common.txt -mc 200
