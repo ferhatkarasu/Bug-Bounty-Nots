@@ -106,7 +106,13 @@
   ->Find domains among our target's IPs.
   #prips 173.0.84.0/24 | hakrevdns
   #cat ips.txt | hakrevdns
-  
+
+🗲Hakip2host (https://github.com/hakluke/hakip2host)
+  ->Find domains among our target's IPs.
+  #prips 173.0.84.0/24 | hakip2host
+  #cat ips.txt | hakip2host
+
+
 🗲CloakQuest3r (https://github.com/spyboy-productions/CloakQuest3r)
   #python3 cloakquest3r.py example.com
 
