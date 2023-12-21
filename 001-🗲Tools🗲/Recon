@@ -85,6 +85,9 @@
 🗲Waymore (https://github.com/xnl-h4ck3r/waymore)
   #python3 waymore.py -i tesla.com -mode U
 
+🗲xnLinkFinder (https://github.com/xnl-h4ck3r/xnLinkFinder)
+  #python3 xnLinkFinder.py -i target.com
+
 🗲Gau (https://github.com/lc/gau)
   #gau --subs --threads 3 --mc 200 --o urls.txt target.com
   #echo “example.com” | gau | grep .js | httpx -mc 200
