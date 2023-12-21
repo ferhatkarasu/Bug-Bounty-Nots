@@ -106,6 +106,9 @@
   #prips 173.0.84.0/24 | hakrevdns
   #cat ips.txt | hakrevdns
   
+🗲CloakQuest3r (https://github.com/spyboy-productions/CloakQuest3r)
+  #python3 cloakquest3r.py example.com
+
 
 🗲Nmap
   #nmap -sC -sV <IP> -v #Basic scan
