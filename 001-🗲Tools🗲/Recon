@@ -94,7 +94,7 @@
   #cat domains.txt | gau --threads 5
 
 🗲LinkFinder (https://github.com/GerbenJavado/LinkFinder)
-  #python linkfinder.py -i https://example.com -d
+  #python linkfinder.py -i https://example.com -o cli
   #python linkfinder.py -i https://example.com/1.js -o results.html
 
 🗲Nuclei (https://github.com/projectdiscovery/nuclei)
