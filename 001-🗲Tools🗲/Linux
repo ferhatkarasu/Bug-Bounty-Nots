@@ -37,6 +37,9 @@
 🗲ps aux
   ->kullanıcılar tarafından çalıştırılan dosyalar
 
+#lsof -i :80 -> 80 portunda hangi servisin çalıştığını gösterir.
+#kill 265470 -> 80 portunda çalışan servisin PID numarasını girerek durdurmaya yarar.
+
 🗲locate my.txt
   ->my.txt dosyamın bulunduğu dizinleri gösterir
 
