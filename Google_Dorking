@@ -15,6 +15,9 @@ site:target.com
 site:*.target.com
 site:*.*.target.com
 -------------------------------------------------
+site:*.hackerone.com -www.hackerone.com -docs.hackerone.com
+->"docs.hackerone.com" ve "www.hackerone.com" arama sonuçlarından çıkarır.
+-------------------------------------------------
 ext:log | ext:txt | ext:conf | ext:php | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~
 ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:jsp | ext:asp | ext:aspx | ext:pl | ext:cfm | ext:py | ext:rb | ext:xml
 ext:logext:ini | ext:env | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess
