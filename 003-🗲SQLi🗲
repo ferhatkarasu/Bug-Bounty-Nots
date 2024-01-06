@@ -44,7 +44,8 @@ Top 25 SQL Injection Parameters for @trbughunters
 ?region=
 
 #Firs detect vulnerability.
-id=1  id=2-1 same ? or 500 internal server error for the following payload ?
+->id=1  id=2-1 same ? or 500 internal server error for the following payload ?
+&apos
 " or "1"+"2
 " or "1"="-2"--
 " or "1+2"/*
