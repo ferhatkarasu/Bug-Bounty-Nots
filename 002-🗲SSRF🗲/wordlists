@@ -2,3 +2,6 @@
 #Tricks
   ->cat allUrls.txt | grep "= | qsreplace https://ferhat.requestcatcher.com/ > ssrf.txt
   ->cat ssrf.txt | httpx-fr
+  ->split -l 10 ssrf.txt çıktı_dosyası_prefix
+
+#
