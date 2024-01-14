@@ -2,6 +2,11 @@
 ->Password reset function(poisoning)
 ->Web cache(poisoning)
 
+#What can be done after the vulnerability has been identified?
+->SSRF
+->Account takeover via password reset poisoning
+->Xss via web cache poisoning
+
 
 #How to exploit?
 1->Change the host header
