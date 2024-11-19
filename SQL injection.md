@@ -5,7 +5,7 @@ select * from users order by 4; -> 2.sütuna göre alfetik olarak sıralar, faka
 
 select * username from users union select id, from emails; -> users tablosundaki username sütunu ile emails tablosundaki id sütununu birleştirir alt alta.
 
-![Uploading Screenshot_1.png…]()
+Type of SQL injection -> https://prnt.sc/AKC6QboDyY9A
 
 
 						1# Detection of vulnerability
