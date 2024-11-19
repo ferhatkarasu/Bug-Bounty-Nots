@@ -6,6 +6,14 @@ select * from users order by 4; -> 2.sütuna göre alfetik olarak sıralar, faka
 select * username from users union select id, from emails; -> users tablosundaki username sütunu ile emails tablosundaki id sütununu birleştirir alt alta.
 
 Type of SQL injection -> https://prnt.sc/AKC6QboDyY9A
+1# In-Band (Classic)
+	a -> Error
+	b- > union
+2# Inferential (Blind)
+	a -> Boolean
+	b -> Time
+3# Out-of-Band
+
 
 
 						1# Detection of vulnerability
@@ -36,8 +44,8 @@ response : 200 response code
 -------------------------------------------------------------------------------------------------
 						#2 Exploitation of weakness
 
-||||||||||||||||||||||||||||||||||||||||||||
-#UNION SQLi
+
+##UNION SQLi
 
 Goal -> Determine the number of the columns returned by the query.
 	Background :
