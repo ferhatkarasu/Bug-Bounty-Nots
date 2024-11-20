@@ -41,6 +41,9 @@ response : 500 internal server error response code
 query #2 : SELECT * FROM haberler WHERE id=1'--
 response : 200 response code
 
+Way #3:
+	' -> internal error
+	'' -> 200 code response
 -------------------------------------------------------------------------------------------------
 						#2 Exploitation of weakness
 
