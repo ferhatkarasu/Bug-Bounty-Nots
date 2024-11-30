@@ -1,40 +1,58 @@
 🗲🗲🗲INFORMATION GATHERING (Subdomain, Directory, IP, Port)🗲🗲🗲
 
-
-  1# Find Subdomains
+# FIND SUBDOMAINS
+  🗲Subfinder (https://github.com/projectdiscovery/subfinder)
+    -> subfinder -d target.com
+    -> subfinder -d target.com -o subs.txt
+    -> subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
     
-    🗲Subfinder (https://github.com/projectdiscovery/subfinder)
-        #subfinder -d target.com
-        #subfinder -d target.com -o subs.txt
-        #subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
-    
-    🗲Knockpy (https://github.com/guelfoweb/knock)
-        #python3 knockpy.py target.com
-        #python3 knockpy.py target.com | tee subs.txt
+  🗲Knockpy (https://github.com/guelfoweb/knock)
+    -> python3 knockpy.py target.com
+    -> python3 knockpy.py target.com | tee subs.txt
       
-    🗲Crtsh (https://github.com/YashGoti/crtsh)
-        #python3 crtsh.py -d target.com
+  🗲Crtsh (https://github.com/YashGoti/crtsh)
+    -> python3 crtsh.py -d target.com
     
-    🗲Amass (https://github.com/owasp-amass/amass)
-        #amass enum -passive -d target.com
-        #amass enum -brute -d target.com
-        #amass enum -o amass.txt -d target.com
-        #amass enum -brute -active -d target.com -o amass.txt
+  🗲Amass (https://github.com/owasp-amass/amass)
+    -> amass enum -passive -d target.com
+    -> amass enum -brute -d target.com
+    -> amass enum -o amass.txt -d target.com
+    -> amass enum -brute -active -d target.com -o amass.txt
+
+  🗲CurL
+    -> curl --silent https://crt.sh/\?q\=%.target.com | sed 's/<\/\?[^>]\+>//g' | grep -i target.com | tail -n +9 | cut -d ">" -f2 | cut -d "<" -f1
+
+  🗲Shadon
+    -> domain taraması -> org:"Google"
 
 //////////////////////////////////////////////////////////////////////////
 
+# Discovering IP Space
+-> Autonomous sytem number -> http://bgp.he.net
+-> find ip address -> https://reverse.report/
+
+  🗲Shadon
+    #ip prefix taraması -> net:64.233.160.0/19
+
+//////////////////////////////////////////////////////////////////////////
+
+# Port Scanning
+  🗲Nmap
+    #nmap -sC -sV <IP> -v #Basic scan
+    #nmap -sS -sV -p - --open <IP> -Pn -n #complete scan
+    #nmap -T4 -Pn -vv -n target.com
+    #nmap -sV -iL subdomains.txt -oN scaned-port.txt --script=vuln
+  
+  🗲Masscan
+    -> masscan -iL ips.txt -8443,8888,8081,3000,9443 --rate=10000 --open
+    -> masscan -p1 -65535 -iL $TARGET_List --max-rate 100000 -oG $TARGET_OUTPUT
+
+
+//////////////////////////////////////////////////////////////////////////
 
 # Check Subdomain Takeover
 -nuclei -l hosts.txt -t subdomain-takeover_detect-all-takeovers.yaml
 
-
-🗲Shadon
-  #ip prefix taraması -> net:64.233.160.0/19
-  #domain tarması -> org:"Google"
-
-🗲CurL
-  ##Subdomain enemuration
-  #curl --silent https://crt.sh/\?q\=%.target.com | sed 's/<\/\?[^>]\+>//g' | grep -i target.com | tail -n +9 | cut -d ">" -f2 | cut -d "<" -f1
 
 
 🗲Httpx (https://github.com/projectdiscovery/httpx)
@@ -128,15 +146,6 @@
 🗲CloakQuest3r (https://github.com/spyboy-productions/CloakQuest3r)
   #python3 cloakquest3r.py example.com
 
-
-🗲Nmap
-  #nmap -sC -sV <IP> -v #Basic scan
-  #nmap -sS -sV -p - --open <IP> -Pn -n #complete scan
-  #nmap -T4 -Pn -vv -n target.com
-  #nmap -sV -iL subdomains.txt -oN scaned-port.txt --script=vuln
-
-🗲Masscan
-  #masscan -iL ips.txt -8443,8888,8081,3000,9443 --rate=10000 --open
 
 🗲BurpSuite
   #advencing-burp suite scope settings : ^.+google\.com$   port: ^443$  file: ^/.*
