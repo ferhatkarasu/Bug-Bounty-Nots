@@ -80,6 +80,8 @@
   #ffuf -w <(seq 0 110) -u https://target.com/FUZZ
   #ffuf -w wordlists.txt -u https://target.com:8080/api/FUZZ/6 -o output.txt
 
+Wfuzz -> https://www.hackingarticles.in/a-detailed-guide-on-wfuzz/
+
 🗲Gobuster (https://github.com/OJ/gobuster)
   #gobuster dir -u http://internal.thm/ -w /usr/share/wordlists/dirb/common.txt
   #gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 10.10.10.56/cgi-bin/ -x sh,cgi,pl -t 200
