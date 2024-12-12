@@ -1,0 +1,57 @@
+Bypass Edilme Durumları ve Nedenleri
+
+1. Eksik İzin ve Filtreleme Kuralları
+Eğer sanitizeHtml() sadece belirli etiketleri veya özellikleri filtreliyorsa, saldırganlar izin verilen özellikler üzerinden zararlı kod eklemeye çalışabilir.
+Örnek:
+  const clean = sanitizeHtml('<img src="javascript:alert(1)">', {
+      allowedTags: ['img'], // img etiketine izin veriliyor.
+      allowedAttributes: { 'img': ['src'] } // src özelliğine izin var.
+  });
+  console.log(clean);
+  // Çıktı: <img src="javascript:alert(1)">
+  Çözüm: src gibi özelliklerin içeriklerini doğrulamak ve yalnızca güvenli protokollere (http, https, vb.) izin vermek gerekir.
+
+2. CSS ile Bypass
+Bazı filtreleme kuralları CSS özelliklerini kontrol etmeyi ihmal edebilir. Zararlı kodlar CSS üzerinden enjekte edilebilir.
+Örnek:
+  const clean = sanitizeHtml('<div style="background-image: url(javascript:alert(1))">', {
+      allowedTags: ['div'],
+      allowedAttributes: { 'div': ['style'] } // style özelliğine izin var.
+  });
+  console.log(clean);
+  // Çıktı: <div style="background-image: url(javascript:alert(1))">
+  Çözüm: style özelliği içindeki değerleri güvenli hale getirecek ek doğrulamalar uygulanmalıdır.
+
+    
+3. Karmaşık HTML Yapıları
+Bazı XSS saldırıları, izin verilen etiketlerin içine kötü amaçlı kod gizlemeye çalışır. Örneğin, bazı filtreler SVG gibi etiketlerde JavaScript kodlarını temizlemeyebilir.
+Örnek:
+  const clean = sanitizeHtml('<svg onload="alert(1)">', {
+      allowedTags: ['svg'], // SVG etiketine izin veriliyor.
+      allowedAttributes: {} // Özellikler kontrol edilmiyor.
+  });
+  console.log(clean);
+  // Çıktı: <svg onload="alert(1)">
+  Çözüm: Özellikle SVG veya MathML gibi daha karmaşık yapıların kullanımına dikkat edilmelidir. Bu tür etiketlerin tamamen yasaklanması tercih edilebilir.
+
+    
+4. Karakter Kodlaması ve Encodelama Hataları
+Bazı durumlarda, saldırganlar özel karakterleri kodlayarak veya karıştırarak filtreleri atlatabilir.
+Örnek:
+  const clean = sanitizeHtml('<a href="java&#115;cript:alert(1)">Link</a>', {
+      allowedTags: ['a'],
+      allowedAttributes: { 'a': ['href'] }
+  });
+  console.log(clean);
+  // Çıktı: <a href="javascript:alert(1)">Link</a>
+  Çözüm: Filtrelerin karakter kodlamalarını da kontrol ettiğinden emin olun. javascript: gibi riskli protokolleri tamamen engellemek faydalıdır.
+
+5. innerHTML ve Dinamik Kod Kullanımı
+Eğer temizlenmiş içerik doğrudan innerHTML gibi bir DOM manipülasyon yöntemiyle tarayıcıya yüklenirse, XSS saldırıları yeniden ortaya çıkabilir.
+Örnek:
+  const clean = sanitizeHtml('<script>alert(1)</script>', {
+      allowedTags: []
+  });
+  document.body.innerHTML = clean;
+  // Eğer sanitizeHtml düzgün çalışsa bile, bazı DOM yöntemleri risk taşıyabilir.
+  Çözüm: Dinamik içerik eklerken yalnızca textContent veya güvenli DOM API'leri kullanın.
