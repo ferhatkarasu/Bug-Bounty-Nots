@@ -1,5 +1,5 @@
 
-PHP'deki htmlspecialchars() fonksiyonunun doğru ve güvenli bir şekilde kullanılması durumunda bypass etmek genellikle mümkün değildir, çünkü fonksiyon HTML özel karakterlerini güvenli hale getirerek doğrudan çalıştırılmasını engeller. Ancak, bazı durumlarda yanlış veya eksik yapılandırma sonucunda htmlspecialchars() etkisiz hale gelebilir. İşte bu gibi durumlarda potansiyel açıklar ortaya çıkabilir:
+/* PHP'deki htmlspecialchars() fonksiyonunun doğru ve güvenli bir şekilde kullanılması durumunda bypass etmek genellikle mümkün değildir, çünkü fonksiyon HTML özel karakterlerini güvenli hale getirerek doğrudan çalıştırılmasını engeller. Ancak, bazı durumlarda yanlış veya eksik yapılandırma sonucunda htmlspecialchars() etkisiz hale gelebilir. İşte bu gibi durumlarda potansiyel açıklar ortaya çıkabilir:
 
 
 Bypass Durumları ve Nedenleri:
@@ -7,6 +7,7 @@ Bypass Durumları ve Nedenleri:
 	Eğer double_encode parametresi true olarak ayarlanırsa (varsayılan ayar), daha önce dönüştürülmüş karakterler yeniden dönüştürülür.
 	Ancak false ayarlandığında, daha önce dönüştürülmüş karakterler olduğu gibi bırakılır. Bu durumda, eğer veri önceden kötü niyetli bir biçimde encode edilmişse, çalıştırılabilir hale gelebilir.
 	Örnek:
+*/
 
 	<?php
 	$input = '&lt;script&gt;alert("XSS")&lt;/script&gt;';
