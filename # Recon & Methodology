@@ -151,3 +151,13 @@ Wfuzz -> https://www.hackingarticles.in/a-detailed-guide-on-wfuzz/
 
 🗲BurpSuite
   #advencing-burp suite scope settings : ^.+google\.com$   port: ^443$  file: ^/.*
+
+
+
+
+Cheklist
+-> Login page
+-> Reset password
+-> Uploading a photo
+-> Display name and profile description
+-> Updating account information
