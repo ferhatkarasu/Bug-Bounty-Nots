@@ -1,4 +1,77 @@
-🗲🗲🗲info commands🗲🗲🗲
+
+
+man <tool>	Belirtilen araç için man sayfalarını açar.
+<tool> -h	Aracın yardım sayfasını yazdırır.
+apropos <keyword>	Belirli bir anahtar kelimenin örneklerini man sayfalarının açıklamalarında arar.
+cat	Dosyaları birleştirin ve yazdırın.
+whoami	Mevcut kullanıcı adını görüntüler.
+id	Kullanıcının kimliğini döndürür.
+hostname	Mevcut ana bilgisayar sisteminin adını ayarlar veya yazdırır.
+uname	İşletim sistemi adını yazdırır.
+pwd	Çalışma dizini adını döndürür.
+ifconfig	Bu ifconfigyardımcı program, bir ağ arayüzüne bir adres atamak veya görüntülemek ve/veya ağ arayüzü parametrelerini yapılandırmak için kullanılır.
+ip	Ip, yönlendirmeyi, ağ aygıtlarını, arayüzleri ve tünelleri göstermek veya düzenlemek için kullanılan bir araçtır.
+netstat	Ağ durumunu gösterir.
+ss	Soketleri incelemek için bir başka yardımcı program.
+ps	İşlem durumunu gösterir.
+who	Kimin oturum açtığını gösterir.
+env	Ortamı yazdırır veya bir komutu ayarlar ve yürütür.
+lsblk	Blok cihazlarını listeler.
+lsusb	USB aygıtlarını listeler.
+lsof	Açılan dosyaları listeler.
+lspci	PCI aygıtlarını listeler.
+sudo	Komutu farklı bir kullanıcı olarak yürütün.
+su	Yardımcı suprogram PAM aracılığıyla uygun kullanıcı kimlik bilgilerini ister ve o kullanıcı kimliğine geçer (varsayılan kullanıcı süper kullanıcıdır). Daha sonra bir kabuk yürütülür.
+useradd	Yeni bir kullanıcı oluşturur veya varsayılan yeni kullanıcı bilgilerini günceller.
+userdel	Bir kullanıcı hesabını ve ilgili dosyaları siler.
+usermod	Bir kullanıcı hesabını değiştirir.
+addgroup	Sisteme bir grup ekler.
+delgroup	Bir grubu sistemden kaldırır.
+passwd	Kullanıcı şifresini değiştirir.
+dpkg	Debian tabanlı paketleri kurun, kaldırın ve yapılandırın.
+apt	Üst düzey paket yönetimi komut satırı yardımcı programı.
+aptitude	Alternatif olarak apt.
+snap	Snap paketlerini kurun, kaldırın ve yapılandırın.
+gem	Ruby için standart paket yöneticisi.
+pip	Python için standart paket yöneticisi.
+git	Sürüm kontrol sistemi komut satırı yardımcı programı.
+systemctl	Komut satırı tabanlı servis ve systemd kontrol yöneticisi.
+ps	Mevcut işlemlerin anlık görüntüsünü yazdırır.
+journalctl	Systemd günlüğünü sorgula.
+kill	Bir işleme sinyal gönderir.
+bg	Bir işlemi arka plana atar.
+jobs	Arka planda çalışan tüm işlemleri listeler.
+fg	Bir süreci ön plana çıkarır.
+curl	Verileri bir sunucudan veya sunucuya aktarmak için komut satırı yardımcı programı.
+wget	curlFTP veya HTTP(s) sunucusundan dosya indirmeye bir alternatif .
+python3 -m http.server	TCP 8000 portunda bir Python3 web sunucusu başlatır.
+ls	Dizin içeriğini listeler.
+cd	Dizini değiştirir.
+clear	Terminali temizler.
+touch	Boş bir dosya oluşturur.
+mkdir	Bir dizin oluşturur.
+tree	Bir dizinin içeriğini yinelemeli olarak listeler.
+mv	Dosyaları veya dizinleri taşıyın veya yeniden adlandırın.
+cp	Dosyaları veya dizinleri kopyalayın.
+nano	Terminal tabanlı metin editörü.
+which	Bir dosyanın veya bağlantının yolunu döndürür.
+find	Bir dizin hiyerarşisindeki dosyaları arar.
+updatedb	Sistemdeki mevcut içerikler için yerel veritabanını günceller.
+locate	Sistemdeki içerikleri bulmak için yerel veritabanını kullanır.
+more	STDOUT veya dosyaları okumak için kullanılan çağrı cihazı.
+less	Daha fazla özelliğe sahip bir alternatif more.
+head	STDOUT'un veya bir dosyanın ilk on satırını yazdırır.
+tail	STDOUT'un veya bir dosyanın son on satırını yazdırır.
+sort	STDOUT veya bir dosyanın içeriğini sıralar.
+grep	Verilen kalıpları içeren belirli sonuçları arar.
+cut	Dosyaların her satırından bölümleri kaldırır.
+tr	Belirli karakterleri değiştirir.
+column	Girişini birden fazla sütuna biçimlendiren komut satırı tabanlı yardımcı program.
+awk	Desen tarama ve işleme dili.
+sed	Metni filtrelemek ve dönüştürmek için bir akış düzenleyicisi.
+wc	Verilen bir girdi için yeni satır, kelime ve bayt sayılarını yazdırır.
+chmod	Bir dosyanın veya dizinin izinlerini değiştirir.
+chown	Bir dosya veya dizinin sahibini ve grubunu değiştirir.
 
 🗲whereis/which/whatis
 
