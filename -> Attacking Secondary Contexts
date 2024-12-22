@@ -1,0 +1,38 @@
+
+Attacking Secondary Contexts in Web Applications, bir web uygulamasında ana (primary) güvenlik kontrolünü atlayarak veya etkisiz hale getirerek uygulamanın farklı bir alanında, genellikle daha az korunan bir ikincil (secondary) bağlamda saldırılar gerçekleştirme yöntemidir. Bu, genellikle uygulamaların birden fazla bağlamda kullanıcı verilerini veya oturumları yönetmesinden kaynaklanır.
+
+Konseptin Detayları:
+Birincil Bağlam (Primary Context):
+
+Uygulamanın ana bileşenlerinde uygulanan güçlü güvenlik önlemlerini ifade eder.
+Örnek: Kullanıcı kimlik doğrulaması, güçlü erişim kontrolleri.
+İkincil Bağlam (Secondary Context):
+
+Uygulamanın diğer bölümleri veya mikro hizmetleri, genellikle daha düşük öncelikli ve güvenlik kontrolleri daha zayıf olabilir.
+Örnek: API uç noktaları, arka plandaki servisler, test ortamları veya loglama sistemleri.
+Saldırı Yöntemleri:
+Yetkisiz Veri Erişimi:
+
+Ana bağlamda yetki kontrollerini atlamak için zayıf bir API veya servis hedeflenebilir.
+Örneğin, admin panellerine erişim gerektirirken, zayıf bir API uç noktasından aynı verilere ulaşmak.
+Cross-Site Scripting (XSS) veya Cross-Site Request Forgery (CSRF):
+
+Daha az korunan bir form veya endpoint üzerinden kötü amaçlı payloadlar çalıştırmak.
+Arka Plan Servislerini Manipüle Etmek:
+
+Uygulamanın loglama, mesajlaşma veya diğer ikincil sistemlerini hedefleyerek hassas verilere erişim veya saldırı gerçekleştirme.
+Yetkilendirme Açıkları:
+
+Kullanıcı rollerinin veya erişim haklarının zayıf bir noktadan suistimal edilmesi.
+Saldırı Örneği:
+Bir e-ticaret sitesinde admin paneli sadece yetkili kullanıcılar tarafından erişilebiliyorken, aynı verilere erişen bir API uç noktası yetki kontrolü yapmadan sorgulanabilir. Bu durumda, saldırgan API uç noktasını kullanarak verilere erişebilir.
+Korunma Yöntemleri:
+Tutarlı Güvenlik Politikaları:
+Hem birincil hem de ikincil bağlamlar için güçlü yetkilendirme ve doğrulama mekanizmaları uygulanmalı.
+Güvenlik Testleri ve Denetimler:
+Tüm sistem bileşenlerinde (API'ler, arka plan servisleri) güvenlik testleri yapılmalı.
+Minimal Yetkilendirme (Principle of Least Privilege):
+Kullanıcılara yalnızca ihtiyaçları olan erişim izinleri verilmeli.
+Token veya Oturum Yönetimi:
+Güçlü oturum yönetimi ve bağlamlar arasında token doğrulama sağlanmalı.
+Bu tür saldırıları önlemek için uygulamaların tüm bağlamlarında aynı güvenlik standartlarını sağlamak kritik öneme sahiptir.
