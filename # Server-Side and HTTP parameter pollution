@@ -1,0 +1,31 @@
+
+# HTTP Paramater Pollution (HPP)
+
+Bir e-ticaret sitesinde saldırgan şu URL'yi manipüle ediyor:
+
+"""
+https://example.com/search?product=shirt&product=<script>alert(1)</script>
+"""
+
+Sonuç:
+Eğer istemci tarafında JavaScript bu parametreyi işlerse, alert(1) çalışabilir (XSS).
+Eğer sunucu tüm parametreleri birleştirirse, beklenmeyen bir sorgu oluşabilir.
+
+
+
+# Server-Side Parameter pollution (SSPP)
+
+Bir rezervasyon sisteminde, saldırgan şu isteği gönderiyor:
+"""
+  POST /reserve HTTP/1.1
+  Content-Type: application/x-www-form-urlencoded
+  
+  room_type=standard&room_type=vip
+"""
+Sonuç:
+Eğer sunucu sadece son değeri işliyorsa: Rezervasyon "vip" olarak yapılır.
+Eğer sunucu ilk değeri işliyorsa: Rezervasyon "standard" kalır.
+Eğer sunucu her iki değeri işlerse: Sunucu mantığı bozulabilir (örneğin, çakışan işlemler veya hata oluşur).
+
+
+
