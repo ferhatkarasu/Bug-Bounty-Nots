@@ -3,6 +3,11 @@
   -> https://github.com/iamj0ker/bypass-403/tree/main
   -> https://github.com/LucasPDiniz/403-Bypass
 
+-> Tarayıcı isteği GET olarak gönderiyor ama sayfa yetkimiz olmadığı için "not access" hatası dönüyor fakat curl ile aynı işlemi POST ile yaparsak başarılı olabilir uygulamanın istekleri farklı yorumlamasından dolayı.
+
+	# www.example.com/admin.php?id=73 -> 403 not access
+	# curl http://example.com/admin -X POST -d 'id=73' -H 'Content-Type: application/x-www-form-urlencoded' -> 202 access
+
 
 
 
