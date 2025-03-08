@@ -1,7 +1,0 @@
-
-#Smugller(https://github.com/defparam/smuggler)
-
-#Http request smuggling detect
-	->Http/1.1 mi?
-	->input gönderdiğinde content length'e dikkat et, sonra content length sayısı düşür ve referans noktana dön, eğer farklılık varsa zafiyet vardır.
-
