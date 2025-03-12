@@ -1,9 +1,13 @@
 
-#FIND SUBDOMAINS
-  🗲Subfinder (https://github.com/projectdiscovery/subfinder)
-    -> subfinder -d target.com
-    -> subfinder -d target.com -o subs.txt
-    -> subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
+### FIND SUBDOMAINS
+
+# Subfinder (https://github.com/projectdiscovery/subfinder)
+````sh
+subfinder -d target.com
+subfinder -d target.com -o subs.txt
+subfinder -d target.com -silent -o subs.txt | httpx -title -content-length -status-code -silent
+```
+
     
   🗲Knockpy (https://github.com/guelfoweb/knock)
     -> python3 knockpy.py target.com
