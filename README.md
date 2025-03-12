@@ -1,4 +1,4 @@
-# myBugBountyNots
+# BugBountyNots
 
 https://ferhatkarasu.com/
 
