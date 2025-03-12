@@ -1,4 +1,0 @@
-
-🗲Knockpy (https://github.com/guelfoweb/knock)
-    -> python3 knockpy.py target.com
-    -> python3 knockpy.py target.com | tee subs.txt
