@@ -190,6 +190,7 @@ cat ips.txt | hakrevdns
 //Find domains among our target's IPs.
 prips 173.0.84.0/24 | hakip2host
 cat ips.txt | hakip2host
+```
 
 # CloakQuest3r (https://github.com/spyboy-productions/CloakQuest3r)
 ```sh
