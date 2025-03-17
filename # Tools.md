@@ -48,7 +48,7 @@ find ip address -> https://reverse.report/
 
 
 
-# PORT SCANNING
+## PORT SCANNING
 
 ### Nmap
 ```sh
@@ -204,9 +204,9 @@ advencing-burp suite scope settings : ^.+google\.com$   port: ^443$  file: ^/.*
 
 # URL Bypass(Directory Traversal | Path Normalization | 403 Bypass)
 
-### nowafpls
+### nowafpls (https://github.com/assetnote/nowafpls/blob/main/README.md)
 ```sh
-https://github.com/assetnote/nowafpls/blob/main/README.md
+Use with burpsuite
 ```
 
 
