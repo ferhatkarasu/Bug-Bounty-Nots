@@ -185,21 +185,28 @@ prips 173.0.84.0/24 | hakrevdns
 cat ips.txt | hakrevdns
 ```
 
-# Hakip2host (https://github.com/hakluke/hakip2host)
+### Hakip2host (https://github.com/hakluke/hakip2host)
 ```sh
 //Find domains among our target's IPs.
 prips 173.0.84.0/24 | hakip2host
 cat ips.txt | hakip2host
 ```
 
-# CloakQuest3r (https://github.com/spyboy-productions/CloakQuest3r)
+### CloakQuest3r (https://github.com/spyboy-productions/CloakQuest3r)
 ```sh
 python3 cloakquest3r.py example.com
 ```
 
-# BurpSuite
+### BurpSuite
 ```sh
 advencing-burp suite scope settings : ^.+google\.com$   port: ^443$  file: ^/.*
+```
+
+# URL Bypass(Directory Traversal | Path Normalization | 403 Bypass)
+
+### nowafpls
+```sh
+https://github.com/assetnote/nowafpls/blob/main/README.md
 ```
 
 
