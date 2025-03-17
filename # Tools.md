@@ -1,5 +1,5 @@
 
-# FIND SUBDOMAINS
+## FIND SUBDOMAINS
 
 ### Subfinder (https://github.com/projectdiscovery/subfinder)
 ```sh
@@ -40,7 +40,7 @@ ip prefix taraması -> net:64.233.160.0/19
 ```
 
 
-# DISCOVERING IP SPACE
+## DISCOVERING IP SPACE
 ```sh
 Autonomous sytem number -> http://bgp.he.net
 find ip address -> https://reverse.report/
